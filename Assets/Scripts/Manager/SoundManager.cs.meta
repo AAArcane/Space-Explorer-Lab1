@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: bad8aae43e1a59f4d8b3c0c7da691c99
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - missileFiredSound: {instanceID: 0}
+  - asteroidHitSound: {instanceID: 0}
+  - playerDeathSound: {instanceID: 0}
+  - collectStarSound: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
