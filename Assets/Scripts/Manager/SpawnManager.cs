@@ -16,9 +16,9 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] private GameObject star;
 
     // Minimum and maximum spawn delays for asteroids and stars
-    [SerializeField] private float minSpawnDelay = 2f;
-    [SerializeField] private float maxSpawnDelay = 5f;
-
+     private float minSpawnDelay = 2f;
+     private float maxSpawnDelay = 5f;
+     private float spawnRateIncrease = 0.5f;
     /// <summary>
     /// Initializes the SpawnManager instance.
     /// </summary>
@@ -44,13 +44,18 @@ public class SpawnManager : MonoBehaviour
     {
         while (GameManager.Instance.IsGamePlaying())
         {
-            int randomCount = UnityEngine.Random.Range(1, 4); // Random number of asteroids to spawn
+            int checkStar = PlayerCollusion.Instance.GetStarCollectCount(); // Check the number of stars collected
+
+            // Calculate the spawn rate based on the number of stars
+            float adjustedSpawnDelay = Mathf.Max(minSpawnDelay, maxSpawnDelay - (checkStar / 5) * spawnRateIncrease); // Decrease wait time
+
+            int randomCount = UnityEngine.Random.Range(1, 4 + (checkStar / 5)); // Random number of asteroids to spawn
             for (int i = 0; i < randomCount; i++)
             {
                 SpawnAsteroid(); // Spawn an asteroid
             }
-            float waitTime = UnityEngine.Random.Range(minSpawnDelay, maxSpawnDelay); // Random wait time
-            yield return new WaitForSeconds(waitTime); // Wait before next spawn
+
+            yield return new WaitForSeconds(adjustedSpawnDelay); // Wait before next spawn
         }
     }
 

@@ -13,7 +13,7 @@ public class PlayerCollusion : MonoBehaviour
     public event EventHandler OnPlayerDeath; // Triggered when the player dies
     public event EventHandler OnStarCollected; // Triggered when a star is collected
 
-    private int starCollect = 0; // Counter for collected stars
+    [SerializeField] private int starCollect = 0; // Counter for collected stars
 
     // Position limits for player movement
     private float xPosLimit = 20.5f; // Horizontal movement limit

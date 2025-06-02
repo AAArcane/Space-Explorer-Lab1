@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 /// <summary>
@@ -37,6 +38,11 @@ public class AsteroidsMovement : MonoBehaviour
     /// </summary>
     private void MoveAsteroid()
     {
+        int starCount = PlayerCollusion.Instance.GetStarCollectCount();
+
+        // Calculate speed based on the number of stars collected
+        speed = 2.5f + (starCount / 5); // Increase speed for every 5 stars collected
+
         // Move the asteroid downwards at a constant speed with horizontal movement
         transform.Translate(new Vector3(horizontalMovementSpeed * Time.deltaTime, -speed * Time.deltaTime, 0));
     }

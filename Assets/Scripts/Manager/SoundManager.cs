@@ -10,7 +10,7 @@ public class SoundManager : MonoBehaviour
     public static SoundManager Instance { get; private set; }
 
     // Audio clips for different game events
-    [SerializeField] private AudioClip missileFiredSound;  // Sound played when a missile is fired
+    public AudioClip missileFiredSound;  // Sound played when a missile is fired
     [SerializeField] private AudioClip asteroidHitSound;    // Sound played when an asteroid is hit
     [SerializeField] private AudioClip playerDeathSound;     // Sound played when the player dies
     [SerializeField] private AudioClip collectStarSound;     // Sound played when a star is collected
@@ -80,7 +80,7 @@ public class SoundManager : MonoBehaviour
     /// <param name="audioClip">The audio clip to play.</param>
     /// <param name="position">The position to play the sound at.</param>
     /// <param name="volume">The volume of the sound (default is 1).</param>
-    private void PlaySound(AudioClip audioClip, Vector3 position, float volume = 1f)
+    public void PlaySound(AudioClip audioClip, Vector3 position, float volume = 1f)
     {
         AudioSource.PlayClipAtPoint(audioClip, position, volume); // Play the audio clip at the specified position
     }
