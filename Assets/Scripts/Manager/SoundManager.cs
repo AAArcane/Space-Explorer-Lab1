@@ -41,7 +41,10 @@ public class SoundManager : MonoBehaviour
     /// <param name="e">Event arguments.</param>
     public void MissileController_OnMissileHit(object sender, EventArgs e)
     {
-        PlaySound(asteroidHitSound, MissileController.Instance.transform.position); // Play the asteroid hit sound
+        if (MissileController.Instance != null)
+        {
+            PlaySound(asteroidHitSound, MissileController.Instance.transform.position); // Play the asteroid hit sound
+        }
     }
 
     /// <summary>
