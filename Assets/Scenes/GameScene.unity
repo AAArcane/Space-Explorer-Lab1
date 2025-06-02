@@ -495,8 +495,6 @@ MonoBehaviour:
   - {fileID: 7782837375435067214, guid: 1b81007a58bd6f64da23b64302d325e3, type: 3}
   - {fileID: 261637536598198803, guid: 3e558a0ecf9e9c847850b9bb8cf365f0, type: 3}
   star: {fileID: 2471334213484369737, guid: 765a13a380200d0468eff2c0241ccf53, type: 3}
-  minSpawnDelay: 2
-  maxSpawnDelay: 5
 --- !u!1 &362726036
 GameObject:
   m_ObjectHideFlags: 0
@@ -1202,6 +1200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   missile: {fileID: 615750841085119309, guid: 0b044dad7aff5ce4ea65de7b0aecabd7, type: 3}
+  maxMissiles: 3
   missileFirePoint: {fileID: 1789369612}
   destroyDelay: 6
   muzzleFirePoint: {fileID: 1656120218}
@@ -2250,6 +2249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bcec84abd81c6b498574ded5a5dc900, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  starCollect: 0
 --- !u!1 &1434249154
 GameObject:
   m_ObjectHideFlags: 0
