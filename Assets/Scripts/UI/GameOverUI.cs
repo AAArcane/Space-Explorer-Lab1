@@ -67,6 +67,7 @@ public class GameOverUI : MonoBehaviour
     /// </summary>
     private void Hide()
     {
+        
         gameObject.SetActive(false); // Deactivate the UI GameObject
     }
 }
