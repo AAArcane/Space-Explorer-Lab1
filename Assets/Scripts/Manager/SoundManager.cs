@@ -9,6 +9,8 @@ public class SoundManager : MonoBehaviour
     // Singleton instance for easy access
     public static SoundManager Instance { get; private set; }
 
+
+    private float volume = 1f; // Default volume level
     // Audio clips for different game events
     public AudioClip missileFiredSound;  // Sound played when a missile is fired
     [SerializeField] private AudioClip asteroidHitSound;    // Sound played when an asteroid is hit
@@ -83,8 +85,24 @@ public class SoundManager : MonoBehaviour
     /// <param name="audioClip">The audio clip to play.</param>
     /// <param name="position">The position to play the sound at.</param>
     /// <param name="volume">The volume of the sound (default is 1).</param>
-    public void PlaySound(AudioClip audioClip, Vector3 position, float volume = 1f)
+    public void PlaySound(AudioClip audioClip, Vector3 position, float volumeMultiplier = 1f)
     {
-        AudioSource.PlayClipAtPoint(audioClip, position, volume); // Play the audio clip at the specified position
+        // Ensure the final volume is not negative
+        float finalVolume = Mathf.Max(0f, volumeMultiplier * volume);
+        AudioSource.PlayClipAtPoint(audioClip, position, finalVolume); // Play the audio clip at the specified position
+    }
+
+    public void ChangeVolume()
+    {
+        volume += 1f;
+        if (volume > 10f)
+        {
+            volume = 0f;
+        }
+    }
+
+    public float GetVolume()
+    {
+        return volume; 
     }
 }

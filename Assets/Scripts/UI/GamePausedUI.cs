@@ -58,17 +58,12 @@ public class GamePausedUI : MonoBehaviour
         Show(); // Show the paused UI when the game is paused
     }
 
-    /// <summary>
-    /// Displays the paused UI.
-    /// </summary>
     private void Show()
     {
         gameObject.SetActive(true); // Activate the UI GameObject
     }
 
-    /// <summary>
-    /// Hides the paused UI.
-    /// </summary>
+   
     private void Hide()
     {
         gameObject.SetActive(false); // Deactivate the UI GameObject
