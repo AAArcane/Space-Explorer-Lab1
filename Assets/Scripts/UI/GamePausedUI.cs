@@ -9,7 +9,7 @@ public class GamePausedUI : MonoBehaviour
 {
     [SerializeField] private Button resumeButton; // Button to resume the game
     [SerializeField] private Button mainMenuButton; // Button to return to the main menu
-
+    [SerializeField] private Button optionsButton;
     /// <summary>
     /// Initializes button click listeners.
     /// </summary>
@@ -25,6 +25,10 @@ public class GamePausedUI : MonoBehaviour
         mainMenuButton.onClick.AddListener(() =>
         {
             Loader.Load(Loader.Scene.MainMenuScene); // Load the main menu scene
+        });
+        optionsButton.onClick.AddListener(() =>
+        {
+            OptionsUI.Instance.Show(); 
         });
     }
 

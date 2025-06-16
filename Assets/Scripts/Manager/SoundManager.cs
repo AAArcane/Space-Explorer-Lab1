@@ -6,12 +6,14 @@ using UnityEngine;
 /// </summary>
 public class SoundManager : MonoBehaviour
 {
-    // Singleton instance for easy access
+
+    private const string PLAYER_PREFS_SOUND_VOLUME = "SoundEffectsVolume"; 
     public static SoundManager Instance { get; private set; }
 
 
-    private float volume = 1f; // Default volume level
-    // Audio clips for different game events
+    private float volume = 1f; 
+
+
     public AudioClip missileFiredSound;  // Sound played when a missile is fired
     [SerializeField] private AudioClip asteroidHitSound;    // Sound played when an asteroid is hit
     [SerializeField] private AudioClip playerDeathSound;     // Sound played when the player dies
@@ -23,6 +25,8 @@ public class SoundManager : MonoBehaviour
     private void Awake()
     {
         Instance = this; // Set the singleton instance
+      volume =  PlayerPrefs.GetFloat(PLAYER_PREFS_SOUND_VOLUME, 1f);
+
     }
 
     /// <summary>
@@ -99,6 +103,9 @@ public class SoundManager : MonoBehaviour
         {
             volume = 0f;
         }
+        PlayerPrefs.SetFloat(PLAYER_PREFS_SOUND_VOLUME, volume); 
+        PlayerPrefs.Save(); 
+
     }
 
     public float GetVolume()
