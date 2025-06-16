@@ -6,22 +6,25 @@ using UnityEngine;
 /// </summary>
 public class GameStartCountDownUI : MonoBehaviour
 {
+    private const string NUMBER_POPUP = "NumberPopUp";
+
+
     [SerializeField] private TextMeshProUGUI countDownText; // Text element to display the countdown timer
 
-    /// <summary>
-    /// Subscribes to the game state changes and hides the countdown UI initially.
-    /// </summary>
+    private int previousCountDownNumber;
+    private Animator animator;
+
+    private void Awake()
+    {
+        animator = GetComponent<Animator>(); 
+    }
     private void Start()
     {
         GameManager.Instance.OnStateChanged += GameManager_OnStateChanged; // Subscribe to state changes
         Hide(); // Hide the countdown UI initially
     }
 
-    /// <summary>
-    /// Handles changes in the game state to show or hide the countdown UI.
-    /// </summary>
-    /// <param name="sender">The source of the event.</param>
-    /// <param name="e">Event arguments.</param>
+    
     private void GameManager_OnStateChanged(object sender, System.EventArgs e)
     {
         if (GameManager.Instance.IsCountDownToStartActive()) // Check if countdown is active
@@ -41,26 +44,24 @@ public class GameStartCountDownUI : MonoBehaviour
     {
         if (GameManager.Instance.IsCountDownToStartActive()) // Check if countdown is active
         {
-            float countDownTimer = GameManager.Instance.GetCountDownToStartTimer(); // Get the remaining countdown time
-            countDownText.text = Mathf.CeilToInt(countDownTimer).ToString(); // Update the text to show the countdown time
-            if (countDownTimer <= 0f) // Hide UI when countdown reaches zero
+            int countDownTimer = Mathf.CeilToInt(GameManager.Instance.GetCountDownToStartTimer());
+            countDownText.text = countDownTimer.ToString();
+
+            if (previousCountDownNumber != countDownTimer)
             {
-                Hide();
+                previousCountDownNumber = countDownTimer;
+                animator.SetTrigger(NUMBER_POPUP);
             }
+          
         }
     }
 
-    /// <summary>
-    /// Displays the countdown UI.
-    /// </summary>
     private void Show()
     {
         gameObject.SetActive(true); // Activate the UI GameObject
     }
 
-    /// <summary>
-    /// Hides the countdown UI.
-    /// </summary>
+  
     private void Hide()
     {
         gameObject.SetActive(false); // Deactivate the UI GameObject
