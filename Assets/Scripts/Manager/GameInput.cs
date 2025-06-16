@@ -7,7 +7,8 @@ using UnityEngine.InputSystem;
 /// </summary>
 public class GameInput : MonoBehaviour
 {
-    // Singleton instance for easy access
+
+    private const string PLAYER_PREFS_INPUT_BINDINGS = "InputBindings"; 
     public static GameInput Instance { get; private set; }
 
     // Enum for defining different input actions
@@ -39,9 +40,15 @@ public class GameInput : MonoBehaviour
             return;
         }
 
-        Instance = this; // Set the singleton instance
-        playerInputActions = new PlayerInputActions(); // Initialize player input actions
-        playerInputActions.Enable(); // Enable input actions
+        Instance = this; 
+        playerInputActions = new PlayerInputActions(); 
+
+        if (PlayerPrefs.HasKey(PLAYER_PREFS_INPUT_BINDINGS))
+        {
+            playerInputActions.LoadBindingOverridesFromJson(PlayerPrefs.GetString(PLAYER_PREFS_INPUT_BINDINGS));
+        }
+
+        playerInputActions.Enable(); 
         playerInputActions.Player.Space.performed += Space_performed; // Subscribe to space action
         playerInputActions.Player.Paused.performed += Paused_performed; // Subscribe to pause action
     }
@@ -109,5 +116,52 @@ public class GameInput : MonoBehaviour
             default:
                 throw new ArgumentOutOfRangeException(nameof(binding), binding, null); // Handle unexpected binding
         }
+    }
+
+    public void RebindBinding(Binding binding, Action onActionRebound)
+    {
+        playerInputActions.Player.Disable();
+
+        InputAction inputAction;
+        int bindingIndex;
+
+        switch (binding)
+        {
+            default:
+            case Binding.Move_Up:
+                inputAction = playerInputActions.Player.Move;
+                bindingIndex = 1; // Up movement binding index
+                break;
+                case Binding.Move_Down:
+                inputAction = playerInputActions.Player.Move;
+                bindingIndex = 2; // Down movement binding index
+                break;
+                case Binding.Move_Left:
+                inputAction = playerInputActions.Player.Move;
+                bindingIndex = 3; // Left movement binding index
+                break;
+                case Binding.Move_Right:
+                inputAction = playerInputActions.Player.Move;
+                bindingIndex = 4; // Right movement binding index
+                break;
+                case Binding.Space:
+                inputAction = playerInputActions.Player.Space;
+                bindingIndex = 0; // Space action binding index
+                break;
+                case Binding.Pause:
+                inputAction = playerInputActions.Player.Paused;
+                bindingIndex = 0; // Pause action binding index
+                break;
+        }
+
+        inputAction.PerformInteractiveRebinding(bindingIndex)
+            .OnComplete(callback =>
+            {
+                callback.Dispose();
+                playerInputActions.Player.Enable();
+                onActionRebound(); 
+                PlayerPrefs.SetString(PLAYER_PREFS_INPUT_BINDINGS, playerInputActions.SaveBindingOverridesAsJson());
+                PlayerPrefs.Save();
+            }).Start();
     }
 }
