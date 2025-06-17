@@ -1,31 +1,37 @@
 using UnityEngine;
 
-/// <summary>
-/// Controls the player's movement within the game.
-/// </summary>
 public class PlayerController : MonoBehaviour
 {
-    // Speed at which the player moves
-    private float speed = 10f;
+    public static PlayerController Instance { get; private set; }
 
-    /// <summary>
-    /// Updates the player's position each frame based on input.
-    /// </summary>
-    private void Update()
+    private float speed = 10f;
+    private Vector2 movementInput; // Stores the current movement input
+
+    private void Awake()
     {
-        PlayerMovement(); // Call method to handle player movement
+        Instance = this;
     }
 
-    /// <summary>
-    /// Handles the player movement based on input from the GameInput class.
-    /// </summary>
+    private void Update()
+    {
+        PlayerMovement();
+    }
+
     private void PlayerMovement()
     {
-        // Get the normalized movement vector from GameInput
-        Vector2 movementInput = GameInput.Instance.GetMovementVectorNormalized();
+        movementInput = GameInput.Instance.GetMovementVectorNormalized();
 
-        // Create a movement vector and apply speed
         Vector3 movement = new Vector3(movementInput.x, movementInput.y, 0) * speed * Time.deltaTime;
-        transform.Translate(movement); // Move the player based on the calculated movement vector
+        transform.Translate(movement);
+    }
+
+    public bool IsMovingLeft()
+    {
+        return movementInput.x < 0;
+    }
+
+    public bool IsMovingRight()
+    {
+        return movementInput.x > 0;
     }
 }

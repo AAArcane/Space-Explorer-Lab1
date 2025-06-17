@@ -44,13 +44,10 @@ public class GameManager : MonoBehaviour
     /// </summary>
     private void Awake()
     {
-        Instance = this; // Set the singleton instance
-        state = State.WaitingToStart; // Initialize state
+        Instance = this; 
+        state = State.WaitingToStart; 
     }
 
-    /// <summary>
-    /// Subscribes to the pause action event from GameInput.
-    /// </summary>
     private void Start()
     {
         GameInput.Instance.OnPauseAction += GameManager_OnPauseAction; // Subscribe to pause events
@@ -87,7 +84,6 @@ public class GameManager : MonoBehaviour
                     state = State.GamePlaying; // Transition to playing state
                     Time.timeScale = 1f; // Ensure game time is running
                     OnStateChanged?.Invoke(this, EventArgs.Empty); // Notify subscribers
-                    SpawnManager.Instance.StartSpawning(); // Start spawning game entities
                 }
                 break;
 

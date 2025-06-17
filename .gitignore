@@ -72,3 +72,4 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 .github/copilot-instructions.md
 /.github
+/Assets/2D Space Kit/Example Scene

@@ -1,103 +1,111 @@
 using System;
 using UnityEngine;
+using System.Collections;
 
-/// <summary>
-/// Manages player missile attacks in the game.
-/// </summary>
 public class PlayerAttack : MonoBehaviour
 {
-    // Singleton instance for easy access
     public static PlayerAttack Instance { get; private set; }
 
-    // Event that is triggered when a missile is fired
     public event EventHandler OnMissileFired;
 
-    // Prefab of the missile to be instantiated
+    [Header("Attack Settings")]
+    [SerializeField] private bool isAttack;
+    [SerializeField] private float attackStateDuration = 0.5f;
+    private Coroutine resetAttackCoroutine;
+
+    [Header("Missile Settings")]
     [SerializeField] private GameObject missile;
     [SerializeField] private int maxMissiles = 3;
-    // Point from which the missile will be fired
     [SerializeField] private Transform missileFirePoint;
-
-    // Time in seconds before the missile is destroyed
     [SerializeField] private int destroyDelay = 10;
 
-    // Point where the muzzle flash particle effect will be instantiated
+    [Header("Effects")]
     [SerializeField] private Transform muzzleFirePoint;
 
-    /// <summary>
-    /// Initializes the PlayerAttack instance and subscribes to input events.
-    /// </summary>
     private void Awake()
     {
-        Instance = this; // Set the singleton instance
-        GameInput.Instance.OnSpaceAction += GameManager_OnSpaceAction; // Subscribe to space key action
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
+
+        GameInput.Instance.OnSpaceAction += GameManager_OnSpaceAction;
     }
 
-    /// <summary>
-    /// Handles the space key action to fire a missile.
-    /// </summary>
-    /// <param name="sender">The source of the event.</param>
-    /// <param name="e">Event arguments.</param>
-    private void GameManager_OnSpaceAction(object sender, System.EventArgs e)
+    private void OnDestroy()
     {
-        // Check if the game is currently active
+        GameInput.Instance.OnSpaceAction -= GameManager_OnSpaceAction;
+    }
+
+    private void GameManager_OnSpaceAction(object sender, EventArgs e)
+    {
         if (!GameManager.Instance.IsGamePlaying()) return;
-
-        // Instantiate muzzle flash particle effect
-        GameManager.Instance.InstantiateParticle(GameManager.Instance.muzzleFlash, muzzleFirePoint);
-
-        // Get the number of stars collected
-        int starCount = PlayerCollusion.Instance.GetStarCollectCount();
-
-
-        // Determine the number of missiles to fire based on stars collected
-        int missilesToFire = 1; // Default to 1 missile
-
-        if (starCount >= 10) missilesToFire = 2; // Fire 2 missiles at 10 stars
-        if (starCount >= 20) missilesToFire = 3; // Fire 3 missiles at 20 stars
-
-        // Fire the missiles
-        for (int i = 0; i < missilesToFire; i++)
+        if (!isAttack)
         {
-            // Determine the rotation and position based on the missile index
-            Quaternion rotation;
-            Vector3 spawnPosition = missileFirePoint.position; // Base position
+            GameManager.Instance.InstantiateParticle(GameManager.Instance.muzzleFlash, muzzleFirePoint);
+            int starCount = PlayerCollusion.Instance.GetStarCollectCount();
+            int missilesToFire = Mathf.Min(1 + starCount / 10, maxMissiles);
 
-            if (missilesToFire == 2)
+            for (int i = 0; i < missilesToFire; i++)
             {
-                // Fire two missiles at 30 and -30 degrees
-                rotation = Quaternion.Euler(0, 0, i == 0 ? 20 : -20);
-            }
-            else if (missilesToFire == 3)
-            {
-                // Fire three missiles: -30, 0, and 30 degrees
-                rotation = Quaternion.Euler(0, 0, i == 0 ? -20 : (i == 1 ? 0 : 20));
-            }
-            else
-            {
-                // Default case: fire 1 missile straight
-                rotation = Quaternion.identity; // No rotation
-            }
+                Quaternion rotation = GetMissileRotation(i, missilesToFire);
+                Vector3 spawnPosition = missileFirePoint.position;
 
-            // Create a new missile instance at the fire point with the calculated rotation
-            GameObject spawnMissile = Instantiate(missile, spawnPosition, rotation);
-            spawnMissile.transform.SetParent(null); // Detach from the fire point
+                GameObject spawnMissile = Instantiate(missile, spawnPosition, rotation);
+                spawnMissile.transform.SetParent(null);
 
-            // Subscribe to the missile hit event
-            MissileController missileController = spawnMissile.GetComponent<MissileController>();
-            if (missileController != null)
-            {
-                missileController.OnMissleHit += SoundManager.Instance.MissileController_OnMissileHit; // Play sound on hit
+                // Setup missile controller
+                if (spawnMissile.TryGetComponent(out MissileController missileController))
+                {
+                    missileController.OnMissleHit += SoundManager.Instance.MissileController_OnMissileHit;
+                }
+
+                // Only trigger events for the first missile
+                if (i == 0)
+                {
+                    OnMissileFired?.Invoke(this, EventArgs.Empty);
+                    SetAttackState();
+                }
+
+                Destroy(spawnMissile, destroyDelay);
             }
-
-            // Trigger the missile fired event only for the first missile
-            if (i == 0)
-            {
-                OnMissileFired?.Invoke(this, EventArgs.Empty);
-            }
-
-            // Schedule the missile for destruction after a delay
-            Destroy(spawnMissile, destroyDelay);
         }
+    }
+
+    private Quaternion GetMissileRotation(int index, int totalMissiles)
+    {
+        return totalMissiles switch
+        {
+            2 => Quaternion.Euler(0, 0, index == 0 ? 20 : -20),
+            3 => Quaternion.Euler(0, 0, index == 0 ? -20 : (index == 1 ? 0 : 20)),
+            _ => Quaternion.identity
+        };
+    }
+
+    private void SetAttackState()
+    {
+        isAttack = true;
+        
+        if (resetAttackCoroutine != null)
+        {
+            StopCoroutine(resetAttackCoroutine);
+        }
+        
+        resetAttackCoroutine = StartCoroutine(ResetAttackAfterDelay());
+    }
+
+    private IEnumerator ResetAttackAfterDelay()
+    {
+        yield return new WaitForSeconds(attackStateDuration);
+        isAttack = false;
+    }
+
+    public bool IsAttack()
+    {
+        return isAttack;
     }
 }

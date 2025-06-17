@@ -22,16 +22,11 @@ public class GameInput : MonoBehaviour
         Pause
     }
 
-    // Events for input actions
     public event EventHandler OnPauseAction; // Triggered when the pause action is performed
     public event EventHandler OnSpaceAction; // Triggered when the space action is performed
 
-    // Player input actions reference
     private PlayerInputActions playerInputActions;
 
-    /// <summary>
-    /// Initializes the GameInput instance and sets up input actions.
-    /// </summary>
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -53,18 +48,11 @@ public class GameInput : MonoBehaviour
         playerInputActions.Player.Paused.performed += Paused_performed; // Subscribe to pause action
     }
 
-    /// <summary>
-    /// Invoked when the space action is performed.
-    /// </summary>
-    /// <param name="obj">The input action callback context.</param>
     private void Space_performed(InputAction.CallbackContext obj)
     {
         OnSpaceAction?.Invoke(this, EventArgs.Empty); // Trigger space action event
     }
 
-    /// <summary>
-    /// Cleans up input action subscriptions and disposes of resources.
-    /// </summary>
     private void OnDestroy()
     {
         playerInputActions.Player.Paused.performed -= Paused_performed; // Unsubscribe from pause action
@@ -73,30 +61,17 @@ public class GameInput : MonoBehaviour
         playerInputActions.Dispose(); // Dispose of player input actions
     }
 
-    /// <summary>
-    /// Gets the normalized movement vector based on player input.
-    /// </summary>
-    /// <returns>A normalized Vector2 representing the movement direction.</returns>
     public Vector2 GetMovementVectorNormalized()
     {
         Vector2 inputVector = playerInputActions.Player.Move.ReadValue<Vector2>(); // Read movement input
         return inputVector.normalized; // Return the normalized vector
     }
 
-    /// <summary>
-    /// Invoked when the pause action is performed.
-    /// </summary>
-    /// <param name="context">The input action callback context.</param>
     private void Paused_performed(InputAction.CallbackContext context)
     {
         OnPauseAction?.Invoke(this, EventArgs.Empty); // Trigger pause action event
     }
 
-    /// <summary>
-    /// Gets the binding text for a specified input action.
-    /// </summary>
-    /// <param name="binding">The binding to retrieve text for.</param>
-    /// <returns>A string representing the binding's current input.</returns>
     public string GetBindingText(Binding binding)
     {
         switch (binding)
