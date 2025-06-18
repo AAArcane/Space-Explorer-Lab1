@@ -30,8 +30,8 @@ public class MissileController : MonoBehaviour
 
     private void CheckBoundary()
     {
-        float xPos = 24f; 
-        float yPos = 11f; 
+        float xPos = 31; 
+        float yPos = 22f; 
 
         if (IsOutOfBounds(xPos, yPos))
         {

@@ -14,32 +14,21 @@ public class SpawnManager : MonoBehaviour
 
     // Star prefab to spawn
     [SerializeField] private GameObject star;
-
-    // Minimum and maximum spawn delays for asteroids and stars
-     private float minSpawnDelay = 2f;
+    
+    private float minSpawnDelay = 2f;
      private float maxSpawnDelay = 5f;
      private float spawnRateIncrease = 0.5f;
-    /// <summary>
-    /// Initializes the SpawnManager instance.
-    /// </summary>
     private void Awake()
     {
         Instance = this; // Set the singleton instance
     }
 
-    /// <summary>
-    /// Starts the spawning process for asteroids and stars.
-    /// </summary>
     public void StartSpawning()
     {
-        StartCoroutine(SpawnAsteroids()); // Start asteroid spawning coroutine
-        StartCoroutine(SpawnStarCoroutine()); // Start star spawning coroutine
+        StartCoroutine(SpawnAsteroids()); 
+        StartCoroutine(SpawnStarCoroutine());
     }
 
-    /// <summary>
-    /// Coroutine that spawns asteroids at random intervals.
-    /// </summary>
-    /// <returns>Waits for the specified delay before spawning more asteroids.</returns>
     private IEnumerator SpawnAsteroids()
     {
         while (GameManager.Instance.IsGamePlaying())
@@ -59,10 +48,6 @@ public class SpawnManager : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Coroutine that spawns stars at random intervals.
-    /// </summary>
-    /// <returns>Waits for the specified delay before spawning more stars.</returns>
     private IEnumerator SpawnStarCoroutine()
     {
         while (GameManager.Instance.IsGamePlaying())
@@ -73,9 +58,6 @@ public class SpawnManager : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Spawns an asteroid at a random position within specified boundaries.
-    /// </summary>
     private void SpawnAsteroid()
     {
         float xPos = 24f; // Horizontal boundary for asteroids
@@ -85,9 +67,6 @@ public class SpawnManager : MonoBehaviour
         Instantiate(asteroidObjects[randomIndex], asteroidsSpawnPos, Quaternion.identity); // Spawn the asteroid
     }
 
-    /// <summary>
-    /// Spawns a star at a random position within specified boundaries.
-    /// </summary>
     private void SpawnStar()
     {
         float duration = 8f; // Duration before the star is destroyed
@@ -98,12 +77,6 @@ public class SpawnManager : MonoBehaviour
         StartCoroutine(DestroyStarAfterTime(newStar, duration)); // Start coroutine to destroy star after duration
     }
 
-    /// <summary>
-    /// Coroutine to destroy the star after a specified duration.
-    /// </summary>
-    /// <param name="star">The star GameObject to destroy.</param>
-    /// <param name="duration">Time to wait before destroying the star.</param>
-    /// <returns>Waits for the specified duration before destroying.</returns>
     private IEnumerator DestroyStarAfterTime(GameObject star, float duration)
     {
         yield return new WaitForSeconds(duration); // Wait for the specified duration

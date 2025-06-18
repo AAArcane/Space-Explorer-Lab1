@@ -1,15 +1,12 @@
 using System;
+using UnityEditor.Timeline.Actions;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
-/// <summary>
-/// Manages the overall game state and flow, including starting, pausing, and ending the game.
-/// </summary>
 public class GameManager : MonoBehaviour
 {
-    // Singleton instance for easy access
     public static GameManager Instance { get; private set; }
 
-    // Enum representing the various states of the game
     private enum State
     {
         WaitingToStart,
@@ -18,18 +15,16 @@ public class GameManager : MonoBehaviour
         GameOver
     }
 
-    private State state; // Current state of the game
+    private State state;
 
-    // Timers for state transitions
-    private float waitingToStartTimer = 1f; // Time before starting countdown
-    private float countDownToStartTimer = 3f; // Countdown duration before the game starts
+    private float waitingToStartTimer = 1f; 
+    private float countDownToStartTimer = 3f;
 
-    // Events for state changes and pause actions
     public event EventHandler OnStateChanged;
     public event EventHandler OnGamePaused;
     public event EventHandler OnGameUnPaused;
 
-    private bool isGamePaused = false; // Tracks whether the game is paused
+    private bool isGamePaused = false; 
 
     [Header("Particle effects")]
     // Prefabs for various particle effects in the game
@@ -39,9 +34,13 @@ public class GameManager : MonoBehaviour
     public GameObject playerDeath; // Effect for player death
     public GameObject CollectStar; // Effect for collecting a star
 
-    /// <summary>
-    /// Initializes the GameManager instance and sets the initial game state.
-    /// </summary>
+
+    private EnemyManager enemyManager;
+    private PlayerController player;
+
+    public int score { get; private set; } = 0;
+    public int lives { get; private set; } = 3;
+
     private void Awake()
     {
         Instance = this; 
@@ -51,19 +50,15 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         GameInput.Instance.OnPauseAction += GameManager_OnPauseAction; // Subscribe to pause events
+        player = FindObjectOfType<PlayerController>();
+        enemyManager = FindObjectOfType<EnemyManager>();
     }
 
-    /// <summary>
-    /// Toggles the game's paused state when the pause action is triggered.
-    /// </summary>
     private void GameManager_OnPauseAction(object sender, System.EventArgs e)
     {
         TogglePausedGame(); // Call method to toggle pause state
     }
 
-    /// <summary>
-    /// Updates the game state based on the current state and timers.
-    /// </summary>
     private void Update()
     {
         switch (state)
@@ -84,59 +79,45 @@ public class GameManager : MonoBehaviour
                     state = State.GamePlaying; // Transition to playing state
                     Time.timeScale = 1f; // Ensure game time is running
                     OnStateChanged?.Invoke(this, EventArgs.Empty); // Notify subscribers
+                    EnemyManager.Instance.StartSpawning();
+
                 }
                 break;
 
             case State.GamePlaying:
-                // Check if the player is alive; if not, transition to game over
                 if (!PlayerCollusion.Instance.IsPlayerAlive())
                 {
                     state = State.GameOver; // Transition to game over state
                     OnStateChanged?.Invoke(this, EventArgs.Empty); // Notify subscribers
+                    
                 }
                 break;
 
             case State.GameOver:
-                // Handle game over state (currently no actions defined)
                 break;
         }
     }
 
-    /// <summary>
-    /// Checks if the game is currently in the playing state.
-    /// </summary>
     public bool IsGamePlaying()
     {
         return state == State.GamePlaying; // Return true if the game is playing
     }
 
-    /// <summary>
-    /// Checks if the countdown to start is currently active.
-    /// </summary>
     public bool IsCountDownToStartActive()
     {
         return state == State.CountDownToStart; // Return true if in countdown state
     }
 
-    /// <summary>
-    /// Checks if the game is over.
-    /// </summary>
     public bool IsGameOver()
     {
         return state == State.GameOver; // Return true if the game is over
     }
 
-    /// <summary>
-    /// Gets the remaining time on the countdown to start.
-    /// </summary>
     public float GetCountDownToStartTimer()
     {
         return countDownToStartTimer; // Return the current countdown timer
     }
 
-    /// <summary>
-    /// Toggles the game's paused state.
-    /// </summary>
     public void TogglePausedGame()
     {
         isGamePaused = !isGamePaused; // Toggle the paused state
@@ -152,11 +133,36 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Instantiates a particle effect at the specified position.
-    /// </summary>
-    /// <param name="particlePrefab">The particle prefab to instantiate.</param>
-    /// <param name="position">The position to instantiate the particle at.</param>
+    private void NewRound()
+    {
+        enemyManager.gameObject.SetActive(true);
+
+    }
+
+    private void NewGame()
+    {
+      //  gameOverUI.SetActive(false);
+
+        SetScore(0);
+        NewRound();
+    }
+
+    private void SetScore(int score)
+    {
+        this.score = score;
+    //    scoreText.text = score.ToString().PadLeft(4, '0');
+    }
+
+
+    public void OnEnemyKilled(Enemy enemy)
+    {
+        enemy.gameObject.SetActive(false);
+
+       // SetScore(score + invader.score);
+
+            //NewRound();
+    }
+    
     public void InstantiateParticle(GameObject particlePrefab, Transform position)
     {
         if (particlePrefab != null && position != null)
@@ -164,5 +170,9 @@ public class GameManager : MonoBehaviour
             GameObject particle = Instantiate(particlePrefab, position.position, Quaternion.identity);
             Destroy(particle, 2f); // Destroy the particle after 2 seconds
         }
+    }
+    public void OnMissileImpact(Vector2 position)
+    {
+        InstantiateParticle(explosionParticle, this.transform);
     }
 }

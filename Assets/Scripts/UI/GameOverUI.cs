@@ -3,18 +3,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-/// <summary>
-/// Manages the game over user interface, displaying collected stars and providing options to restart or go to the main menu.
-/// </summary>
 public class GameOverUI : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI starCollectedText; // Text element to display the number of stars collected
     [SerializeField] private Button restartButton; // Button to restart the game
     [SerializeField] private Button mainMenuButton; // Button to return to the main menu
 
-    /// <summary>
-    /// Initializes the buttons' click listeners.
-    /// </summary>
     private void Awake()
     {
         restartButton.onClick.AddListener(() =>
@@ -26,10 +20,6 @@ public class GameOverUI : MonoBehaviour
            SceneManager.LoadScene("MainMenuScene"); // Load the main menu scene when the button is clicked
         });
     }
-
-    /// <summary>
-    /// Subscribes to the game manager's state change event and hides the UI initially.
-    /// </summary>
     private void Start()
     {
         GameManager.Instance.OnStateChanged += GameManager_OnStateChanged; // Subscribe to state changes

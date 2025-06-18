@@ -4,12 +4,23 @@ public class PlayerController : MonoBehaviour
 {
     public static PlayerController Instance { get; private set; }
 
-    private float speed = 10f;
-    private Vector2 movementInput; // Stores the current movement input
+    [SerializeField] private int maxHealth = 100;
+    [SerializeField] private int currentHealth;
 
+    private float speed = 10f;
+    private Vector2 movementInput; 
+
+
+    private int health = 100; 
     private void Awake()
     {
         Instance = this;
+    }
+    private void Start()
+    {
+        currentHealth = maxHealth;
+        HealthBarUI.Instance.SetMaxHealth(maxHealth);
+
     }
 
     private void Update()
@@ -34,4 +45,14 @@ public class PlayerController : MonoBehaviour
     {
         return movementInput.x > 0;
     }
+
+    public void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        HealthBarUI.Instance.SetHealth(currentHealth);
+    }
+
+    public int GetMaxHealth() => maxHealth; 
+    
+    public int GetCurrentHealth() => currentHealth; 
 }
