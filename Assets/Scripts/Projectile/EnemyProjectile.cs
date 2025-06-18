@@ -6,7 +6,7 @@ public class EnemyProjectile : MonoBehaviour
     private Vector3 direction;
     private Rigidbody2D rb;
 
-
+    private int damage; 
 
     private void Awake()
     {
@@ -28,16 +28,14 @@ public class EnemyProjectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
-            // Handle player damage
-            Destroy(gameObject);
-        }
-        else if (collision.CompareTag("Boundary"))
-        {
+            damage = 5;
+            PlayerController.Instance.TakeDamage(damage);
             Destroy(gameObject);
         }
     }
+
 
     private void CheckBoundary()
     {

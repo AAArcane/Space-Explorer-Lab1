@@ -47,8 +47,8 @@ public class PlayerAttack : MonoBehaviour
         if (!isAttack)
         {
             GameManager.Instance.InstantiateParticle(GameManager.Instance.muzzleFlash, muzzleFirePoint);
-            int starCount = PlayerCollusion.Instance.GetStarCollectCount();
-            int missilesToFire = Mathf.Min(1 + starCount / 10, maxMissiles);
+            int scoreCount = ScoreUI.Instance.GetScore();
+            int missilesToFire = Mathf.Min(1 + scoreCount / 500, maxMissiles);
 
             for (int i = 0; i < missilesToFire; i++)
             {
@@ -80,7 +80,7 @@ public class PlayerAttack : MonoBehaviour
     {
         return totalMissiles switch
         {
-            2 => Quaternion.Euler(0, 0, index == 0 ? 20 : -20),
+            2 => Quaternion.Euler(0, 0, index == 0 ? 5 : -5),
             3 => Quaternion.Euler(0, 0, index == 0 ? -20 : (index == 1 ? 0 : 20)),
             _ => Quaternion.identity
         };

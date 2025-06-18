@@ -33,18 +33,18 @@ public class SpawnManager : MonoBehaviour
     {
         while (GameManager.Instance.IsGamePlaying())
         {
-            int checkStar = PlayerCollusion.Instance.GetStarCollectCount(); // Check the number of stars collected
+            int checkScore = ScoreUI.Instance.GetScore();
 
             // Calculate the spawn rate based on the number of stars
-            float adjustedSpawnDelay = Mathf.Max(minSpawnDelay, maxSpawnDelay - (checkStar / 5) * spawnRateIncrease); // Decrease wait time
+            float adjustedSpawnDelay = Mathf.Max(minSpawnDelay, maxSpawnDelay - (checkScore / 500) * spawnRateIncrease); // Decrease wait time
 
-            int randomCount = UnityEngine.Random.Range(1, 4 + (checkStar / 5)); // Random number of asteroids to spawn
+            int randomCount = UnityEngine.Random.Range(1, 2 + (checkScore / 500)); 
             for (int i = 0; i < randomCount; i++)
             {
-                SpawnAsteroid(); // Spawn an asteroid
+                SpawnAsteroid(); 
             }
 
-            yield return new WaitForSeconds(adjustedSpawnDelay); // Wait before next spawn
+            yield return new WaitForSeconds(adjustedSpawnDelay); 
         }
     }
 

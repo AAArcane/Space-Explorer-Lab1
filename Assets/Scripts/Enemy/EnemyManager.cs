@@ -42,12 +42,11 @@ public class EnemyManager : MonoBehaviour
     {
         while (GameManager.Instance.IsGamePlaying())
         {
-            int checkStar = PlayerCollusion.Instance.GetStarCollectCount(); // Check the number of stars collected
-
+            int scoreCheck = ScoreUI.Instance.GetScore();
             // Calculate the spawn rate based on the number of stars
-            float adjustedSpawnDelay = Mathf.Max(minSpawnDelay, maxSpawnDelay - (checkStar / 5) * spawnRateIncrease); // Decrease wait time
+            float adjustedSpawnDelay = Mathf.Max(minSpawnDelay, maxSpawnDelay - (scoreCheck / 500) * spawnRateIncrease); // Decrease wait time
 
-            int randomCount = UnityEngine.Random.Range(1, 4 + (checkStar / 5)); // Random number of asteroids to spawn
+            int randomCount = UnityEngine.Random.Range(1, 2 + (scoreCheck / 500)); // Random number of asteroids to spawn
             for (int i = 0; i < randomCount; i++)
             {
                 SpawnEnemy(); 

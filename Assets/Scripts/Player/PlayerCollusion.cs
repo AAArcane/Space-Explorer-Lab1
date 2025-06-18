@@ -8,10 +8,11 @@ public class PlayerCollusion : MonoBehaviour
     public event EventHandler OnPlayerDeath;
     public event EventHandler OnStarCollected;
 
-    [SerializeField] private int starCollect = 0;
+    [SerializeField] private int starCollect ;
     private bool playerIsAlive = true;
     private Camera mainCamera;
     private Transform playerRoot;
+    private int damage;
 
     // Custom Y-axis boundaries
     private const float Y_MIN = -6.2f;
@@ -54,9 +55,13 @@ public class PlayerCollusion : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+            if (!playerIsAlive) return; 
         if (collision.gameObject.CompareTag("Asteroid"))
         {
+            damage = 20;
+            PlayerController.Instance.TakeDamage(damage);
             HandlePlayerDeath();
+            Destroy(collision.gameObject); 
         }
     }
 
@@ -70,55 +75,37 @@ public class PlayerCollusion : MonoBehaviour
 
     private void HandlePlayerDeath()
     {
-        playerIsAlive = false;
-       
+        int health = PlayerController.Instance.GetCurrentHealth();
+        if (health <= 0)
+        {
+            playerIsAlive = false;
 
-        GameManager.Instance.InstantiateParticle(
-            GameManager.Instance.playerDeath,
-            playerRoot.transform // Use root position
-        );
 
-        OnPlayerDeath?.Invoke(this, EventArgs.Empty);
-        playerRoot.gameObject.SetActive(false);
+            GameManager.Instance.InstantiateParticle(
+                GameManager.Instance.playerDeath,
+                playerRoot.transform
+            );
+            OnPlayerDeath?.Invoke(this, EventArgs.Empty);
+            playerRoot.gameObject.SetActive(false);
+        }
+        
     }
 
     private void HandleStarCollection(GameObject star)
     {
-        
+        starCollect = 30;
+        ScoreUI.Instance.AddScore(starCollect);
         Destroy(star);
-        starCollect++;
 
         GameManager.Instance.InstantiateParticle(
             GameManager.Instance.CollectStar,
             star.transform
         );
-
         OnStarCollected?.Invoke(this, EventArgs.Empty);
     }
 
     public int GetStarCollectCount() => starCollect;
     public bool IsPlayerAlive() => playerIsAlive;
 
-    // Gizmos for visualization
-    private void OnDrawGizmos()
-    {
-        if (!Application.isPlaying || mainCamera == null) return;
-
-        // Draw custom Y boundaries
-        Gizmos.color = Color.cyan;
-        Vector3 left = mainCamera.ViewportToWorldPoint(new Vector3(0, 0, -mainCamera.transform.position.z));
-        Vector3 right = mainCamera.ViewportToWorldPoint(new Vector3(1, 0, -mainCamera.transform.position.z));
-
-        // Draw min line
-        Gizmos.DrawLine(
-            new Vector3(left.x, Y_MIN, 0),
-            new Vector3(right.x, Y_MIN, 0)
-        );
-
-        // Draw max line
-        Gizmos.DrawLine(
-            new Vector3(left.x, Y_MAX, 0),
-            new Vector3(right.x, Y_MAX, 0)
-        );
-    }
+    
 }

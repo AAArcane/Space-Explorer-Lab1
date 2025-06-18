@@ -21,10 +21,9 @@ public class EnemyMovement : MonoBehaviour
     private void MoveEnemy()
     {
         // Get the number of stars collected by the player
-        int starCount = PlayerCollusion.Instance.GetStarCollectCount();
+        int scoreCount = ScoreUI.Instance.GetScore();
 
-        // Increase speed based on the number of stars collected
-        float speed = baseSpeed + (starCount / 5f); // Use 5f for float division
+        float speed = baseSpeed + (scoreCount/ 500f); // Use 5f for float division
 
         // Move the enemy
         transform.Translate(new Vector3(horizontalMovementSpeed * Time.deltaTime, -speed * Time.deltaTime, 0));

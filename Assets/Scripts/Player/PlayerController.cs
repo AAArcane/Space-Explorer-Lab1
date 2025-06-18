@@ -11,7 +11,6 @@ public class PlayerController : MonoBehaviour
     private Vector2 movementInput; 
 
 
-    private int health = 100; 
     private void Awake()
     {
         Instance = this;
@@ -26,6 +25,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         PlayerMovement();
+
     }
 
     private void PlayerMovement()
@@ -51,6 +51,7 @@ public class PlayerController : MonoBehaviour
         currentHealth -= damage;
         HealthBarUI.Instance.SetHealth(currentHealth);
     }
+
 
     public int GetMaxHealth() => maxHealth; 
     

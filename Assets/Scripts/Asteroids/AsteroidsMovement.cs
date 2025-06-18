@@ -10,6 +10,7 @@ public class AsteroidsMovement : MonoBehaviour
 
     [SerializeField] private float horizontalMovementRange = 1.0f;
 
+
     private float horizontalMovementSpeed;
 
     private void Start()
@@ -25,17 +26,17 @@ public class AsteroidsMovement : MonoBehaviour
 
     private void MoveAsteroid()
     {
-        int starCount = PlayerCollusion.Instance.GetStarCollectCount();
+        int scoreCheck = ScoreUI.Instance.GetScore();
 
-        speed = 2.5f + (starCount / 5); // Increase speed for every 5 stars collected
+        speed = 2.5f + (scoreCheck/ 500); // Increase speed for every 5 stars collected
 
         transform.Translate(new Vector3(horizontalMovementSpeed * Time.deltaTime, -speed * Time.deltaTime, 0));
     }
 
     private void DestroyOutOfBounds()
     {
-        float xPos = 25f; // Right boundary
-        float yPos = 20f; // Bottom boundary
+        float xPos = 30f; // Right boundary
+        float yPos = 30f; // Bottom boundary
 
         if (IsOutOfBounds(xPos, yPos))
         {

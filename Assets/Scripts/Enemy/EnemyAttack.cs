@@ -5,7 +5,8 @@ public class EnemyAttack : MonoBehaviour
     public static EnemyAttack Instance { get; private set; }
 
     private bool isReady;
-    private float fireAgain = 4f; // Set initial cooldown time
+    private float fireCooldown;
+    private float cooldownDuration = 4f; // Base cooldown time between shots
 
     [SerializeField] private Transform missilePosition;
     [SerializeField] private GameObject missile;
@@ -19,6 +20,7 @@ public class EnemyAttack : MonoBehaviour
     private void Start()
     {
         GameObject player = GameObject.FindWithTag("Player");
+        fireCooldown = Random.Range(0f, cooldownDuration);
 
         if (player != null)
         {
@@ -35,9 +37,9 @@ public class EnemyAttack : MonoBehaviour
         if (!gameObject.activeInHierarchy) return;
         if (!GameManager.Instance.IsGamePlaying()) return;
 
-        fireAgain -= Time.deltaTime;
+        fireCooldown -= Time.deltaTime;
 
-        if (fireAgain <= 0)
+        if (fireCooldown <= 0)
         {
             GameObject spawnMissile = Instantiate(missile, missilePosition.position, Quaternion.identity);
             EnemyProjectile projectile = spawnMissile.GetComponent<EnemyProjectile>();
@@ -45,10 +47,10 @@ public class EnemyAttack : MonoBehaviour
             GameObject player = GameObject.FindWithTag("Player");
             if (player != null)
             {
-                projectile.Fire(player.transform.position); // Aim the missile at the player's position
+                projectile.Fire(player.transform.position); 
             }
 
-            fireAgain = 5f; // Reset the fire cooldown
+            fireCooldown = cooldownDuration + Random.Range(-1f, 1f);
         }
     }
 
@@ -64,7 +66,7 @@ public class EnemyAttack : MonoBehaviour
                 Destroy(gameObject);
             }
 
-            SpawnMissile(); // Check for missile spawning
+            SpawnMissile(); 
         }
     }
 }

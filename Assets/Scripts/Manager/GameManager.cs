@@ -35,11 +35,7 @@ public class GameManager : MonoBehaviour
     public GameObject CollectStar; // Effect for collecting a star
 
 
-    private EnemyManager enemyManager;
-    private PlayerController player;
 
-    public int score { get; private set; } = 0;
-    public int lives { get; private set; } = 3;
 
     private void Awake()
     {
@@ -50,8 +46,6 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         GameInput.Instance.OnPauseAction += GameManager_OnPauseAction; // Subscribe to pause events
-        player = FindObjectOfType<PlayerController>();
-        enemyManager = FindObjectOfType<EnemyManager>();
     }
 
     private void GameManager_OnPauseAction(object sender, System.EventArgs e)
@@ -80,6 +74,7 @@ public class GameManager : MonoBehaviour
                     Time.timeScale = 1f; // Ensure game time is running
                     OnStateChanged?.Invoke(this, EventArgs.Empty); // Notify subscribers
                     EnemyManager.Instance.StartSpawning();
+                    SpawnManager.Instance.StartSpawning(); 
 
                 }
                 break;
@@ -133,36 +128,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void NewRound()
-    {
-        enemyManager.gameObject.SetActive(true);
-
-    }
-
-    private void NewGame()
-    {
-      //  gameOverUI.SetActive(false);
-
-        SetScore(0);
-        NewRound();
-    }
-
-    private void SetScore(int score)
-    {
-        this.score = score;
-    //    scoreText.text = score.ToString().PadLeft(4, '0');
-    }
-
-
-    public void OnEnemyKilled(Enemy enemy)
-    {
-        enemy.gameObject.SetActive(false);
-
-       // SetScore(score + invader.score);
-
-            //NewRound();
-    }
-    
     public void InstantiateParticle(GameObject particlePrefab, Transform position)
     {
         if (particlePrefab != null && position != null)

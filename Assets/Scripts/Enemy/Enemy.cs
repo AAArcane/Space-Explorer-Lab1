@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
     public float animationTime = 1f;
     public int score = 10;
 
+    private int health = 3; 
     private SpriteRenderer spriteRenderer;
     private int animationFrame;
 
@@ -20,7 +21,13 @@ public class Enemy : MonoBehaviour
 
     private void Start()
     {
+        health = 3; 
         InvokeRepeating(nameof(AnimateSprite), animationTime, animationTime);
+    }
+
+   private void Update()
+    {
+        OnEnemyHealthReachZero();
     }
 
     private void AnimateSprite()
@@ -40,7 +47,8 @@ public class Enemy : MonoBehaviour
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Laser"))
         {
-            GameManager.Instance.OnEnemyKilled(this);
+            health--;
+
         }
         else if (other.gameObject.layer == LayerMask.NameToLayer("Boundary"))
         {
@@ -48,8 +56,11 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void EnemyState()
-    {
-       
+    private void OnEnemyHealthReachZero()
+    { if (health <= 0)
+        {
+            ScoreUI.Instance.AddScore(score); 
+            gameObject.SetActive(false); 
+        }
     }
 }

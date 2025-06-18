@@ -22,15 +22,15 @@ public class MovingBackGround : MonoBehaviour
 
     private void BackGroundChanged()
     {
-        int starCollected = PlayerCollusion.Instance.GetStarCollectCount();
-        UpdateBackground(starCollected);
+        int checkScore = ScoreUI.Instance.GetScore();
+        UpdateBackground(checkScore);
     }
 
-    private void UpdateBackground(int starCount)
+    private void UpdateBackground(int checkScore)
     {
         // Set active backgrounds based on star count
-        BackGround1.SetActive(starCount < 10);
-        BackGround2.SetActive(starCount >= 10 && starCount <= 19);
-        BackGround3.SetActive(starCount >= 20);
+        BackGround1.SetActive(checkScore < 599);
+        BackGround2.SetActive(checkScore >= 600 && checkScore <= 999);
+        BackGround3.SetActive(checkScore >= 1000);
     }
 }
