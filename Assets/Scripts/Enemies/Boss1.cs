@@ -11,16 +11,28 @@ public class Boss1 : MonoBehaviour
     private float switchTimer;
 
     private int lives;
-    private int damage;
+    private int maxLives = 100;
+    private int damage = 20;
 
-    void Start()
+
+    private ObjectPooler destroyEffectPool;
+
+    void Awake()
     {
-        lives = 100;
-        damage = 20;
-
         animator = GetComponent<Animator>();
+        gameObject.SetActive(false);
+    }
+    private void OnEnable()
+    {
+        lives = maxLives;
         EnterChargeState();
         AudioManager.Instance.PlaySound(AudioManager.Instance.bossSpawn);
+
+    }
+    void Start()
+    {
+
+        destroyEffectPool = GameObject.Find("Boom3Pool").GetComponent<ObjectPooler>();
     }
 
     void Update()
@@ -54,7 +66,7 @@ public class Boss1 : MonoBehaviour
 
         transform.position += new Vector3(moveX, moveY);
         if (transform.position.x < -11){
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 
@@ -91,5 +103,15 @@ public class Boss1 : MonoBehaviour
     public void TakeDamage(int damage){
         AudioManager.Instance.PlayModifiedSound(AudioManager.Instance.hitArmor);
         lives -= damage;
+        if (lives <= 0){
+            GameObject destroyEffect = destroyEffectPool.GetPooledObject();
+            destroyEffect.transform.position = transform.position;
+            destroyEffect.transform.rotation = transform.rotation;
+            destroyEffect.SetActive(true);
+            AudioManager.Instance.PlayModifiedSound(AudioManager.Instance.boom2);
+            gameObject.SetActive(false);
+        } else {
+            animator.SetTrigger("hit");
+        }
     }
 }

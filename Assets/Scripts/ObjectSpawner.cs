@@ -11,7 +11,7 @@ public class ObjectSpawner : MonoBehaviour
 
     [System.Serializable]
     public class Wave {
-        public GameObject prefab;
+        public ObjectPooler pool;
         public float spawnTimer;
         public float spawnInterval;
         public int objectsPerWave;
@@ -35,7 +35,10 @@ public class ObjectSpawner : MonoBehaviour
     }
 
     private void SpawnObject(){
-        Instantiate(waves[waveNumber].prefab, RandomSpawnPoint(), transform.rotation, transform);
+        GameObject spawnObject = waves[waveNumber].pool.GetPooledObject();
+        spawnObject.transform.position = RandomSpawnPoint();
+        //spawnObject.transform.rotation = transform.rotation;
+        spawnObject.SetActive(true);
         waves[waveNumber].spawnedObjectCount++;
     }
 
