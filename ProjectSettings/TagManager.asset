@@ -4,10 +4,10 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - Asteroid
-  - Projectile
-  - Point
-  - Boundary
+  - Obstacle
+  - Bullet
+  - Critter
+  - Boss
   layers:
   - Default
   - TransparentFX
@@ -15,13 +15,13 @@ TagManager:
   - 
   - Water
   - UI
-  - Point
   - Player
-  - Enemy
-  - Laser
-  - Missile
-  - Boundary
-  - Bunker
+  - LevelBoundaries
+  - Obstacle
+  - Critter
+  - Bullet
+  - Boss
+  - 
   - 
   - 
   - 
@@ -44,6 +44,18 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 351735159
+    locked: 0
+  - name: Objects
+    uniqueID: 2006439231
+    locked: 0
+  - name: Player
+    uniqueID: 794398291
+    locked: 0
+  - name: UI
+    uniqueID: 4251169429
     locked: 0
   m_RenderingLayers:
   - Default
