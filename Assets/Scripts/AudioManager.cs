@@ -5,8 +5,7 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;
 
-    public AudioSource musicSource; // Add this for background music
-    public AudioMixer audioMixer;
+    public AudioSource musicSource; 
     private float _soundEffectsVolume = 1f;
     private float _musicVolume = 1f;
 

@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
             Pause();
         }
 
-        if (critterCounter > 15){
+        if (critterCounter > 60){
             critterCounter = 0;
             GameObject boss1 = boss1Pool.GetPooledObject();
             boss1.transform.position = new Vector2(15f, 0);

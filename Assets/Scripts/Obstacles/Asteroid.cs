@@ -13,7 +13,7 @@ public class Asteroid : MonoBehaviour
     private int maxLives = 5;
     private int damage = 1;
     private int scoreToGiveOnDestroy = 2;
-    private int experienceToGive = 1;
+    private int experienceToGive = 2;
 
     [SerializeField] private Sprite[] sprites;
     float pushX ;

@@ -1036,17 +1036,27 @@ MonoBehaviour:
     spawnedObjectCount: 0
   - pool: {fileID: 1999529957}
     spawnTimer: 0
-    spawnInterval: 0.8
+    spawnInterval: 0.5
     objectsPerWave: 70
     spawnedObjectCount: 0
   - pool: {fileID: 134368870}
     spawnTimer: 0
-    spawnInterval: 0.5
-    objectsPerWave: 20
+    spawnInterval: 0.25
+    objectsPerWave: 30
     spawnedObjectCount: 0
   - pool: {fileID: 1541702619}
     spawnTimer: 0
-    spawnInterval: 0.8
+    spawnInterval: 0.25
+    objectsPerWave: 30
+    spawnedObjectCount: 0
+  - pool: {fileID: 390406631}
+    spawnTimer: 0
+    spawnInterval: 0.2
+    objectsPerWave: 40
+    spawnedObjectCount: 0
+  - pool: {fileID: 134368870}
+    spawnTimer: 0
+    spawnInterval: 0.25
     objectsPerWave: 30
     spawnedObjectCount: 0
   - pool: {fileID: 1999529957}
@@ -1054,15 +1064,45 @@ MonoBehaviour:
     spawnInterval: 0.5
     objectsPerWave: 70
     spawnedObjectCount: 0
+  - pool: {fileID: 390406631}
+    spawnTimer: 0
+    spawnInterval: 0.2
+    objectsPerWave: 10
+    spawnedObjectCount: 0
+  - pool: {fileID: 1999529957}
+    spawnTimer: 0
+    spawnInterval: 0.5
+    objectsPerWave: 70
+    spawnedObjectCount: 0
+  - pool: {fileID: 134368870}
+    spawnTimer: 0
+    spawnInterval: 0.5
+    objectsPerWave: 70
+    spawnedObjectCount: 0
+  - pool: {fileID: 390406631}
+    spawnTimer: 0
+    spawnInterval: 0.2
+    objectsPerWave: 70
+    spawnedObjectCount: 0
+  - pool: {fileID: 2006729512}
+    spawnTimer: 0
+    spawnInterval: 1
+    objectsPerWave: 1
+    spawnedObjectCount: 0
+  - pool: {fileID: 390406631}
+    spawnTimer: 0
+    spawnInterval: 0.5
+    objectsPerWave: 30
+    spawnedObjectCount: 0
   - pool: {fileID: 1541702619}
     spawnTimer: 0
     spawnInterval: 0.5
     objectsPerWave: 50
     spawnedObjectCount: 0
-  - pool: {fileID: 134368870}
+  - pool: {fileID: 1999529957}
     spawnTimer: 0
     spawnInterval: 0.25
-    objectsPerWave: 40
+    objectsPerWave: 60
     spawnedObjectCount: 0
   - pool: {fileID: 1999529957}
     spawnTimer: 0
@@ -1082,6 +1122,11 @@ MonoBehaviour:
   - pool: {fileID: 1999529957}
     spawnTimer: 0
     spawnInterval: 0.5
+    objectsPerWave: 30
+    spawnedObjectCount: 0
+  - pool: {fileID: 1541702619}
+    spawnTimer: 0
+    spawnInterval: 0.25
     objectsPerWave: 30
     spawnedObjectCount: 0
 --- !u!4 &196944668
@@ -12678,7 +12723,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1a1cc08d524095e4094ffb9d3ffde94d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -13391,7 +13436,7 @@ MonoBehaviour:
   experience: 0
   currentLevel: 0
   maxLevel: 30
-  playerLevels: 1e0000003c0000005a000000
+  playerLevels: 320000006400000096000000
 --- !u!95 &1806995887
 Animator:
   serializedVersion: 7
