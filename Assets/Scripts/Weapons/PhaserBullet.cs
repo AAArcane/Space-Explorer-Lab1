@@ -25,12 +25,6 @@ public class PhaserBullet : MonoBehaviour
             if (asteroid) asteroid.TakeDamage(weapon.stats[weapon.weaponLevel].damage, true);
             gameObject.SetActive(false);
         }
-        else if (collision.gameObject.CompareTag("Boss"))
-        {
-            Boss1 boss1 = collision.gameObject.GetComponent<Boss1>();
-            if (boss1) boss1.TakeDamage(weapon.stats[weapon.weaponLevel].damage);
-            gameObject.SetActive(false);
-        }
         else if (collision.gameObject.CompareTag("Critter"))
         {
             gameObject.SetActive(false);
