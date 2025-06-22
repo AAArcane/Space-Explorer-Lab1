@@ -80,4 +80,6 @@ public class GameManager : MonoBehaviour
     public void SetWorldSpeed(float speed){
         worldSpeed = speed;
     }
+
+    
 }

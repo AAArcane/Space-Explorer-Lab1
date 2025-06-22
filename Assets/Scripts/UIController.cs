@@ -13,30 +13,36 @@ public class UIController : MonoBehaviour
     [SerializeField] private Slider experienceSlider;
     [SerializeField] private TMP_Text experienceText;
 
-   
+
     [SerializeField] private TextMeshProUGUI scoreText;
     public GameObject pausePanel;
 
     private int currentScore;
 
-    void Awake(){
+    void Awake()
+    {
         currentScore = 0;
-        if (Instance != null){
+        if (Instance != null)
+        {
             Destroy(gameObject);
-        } else {
+        }
+        else
+        {
             Instance = this;
         }
     }
 
-    
 
-    public void UpdateEnergySlider(float current, float max){
+
+    public void UpdateEnergySlider(float current, float max)
+    {
         energySlider.maxValue = max;
         energySlider.value = Mathf.RoundToInt(current);
         energyText.text = energySlider.value + "/" + energySlider.maxValue;
     }
 
-    public void UpdateHealthSlider(float current, float max){
+    public void UpdateHealthSlider(float current, float max)
+    {
         healthSlider.maxValue = max;
         healthSlider.value = Mathf.RoundToInt(current);
         healthText.text = healthSlider.value + "/" + healthSlider.maxValue;
@@ -49,8 +55,14 @@ public class UIController : MonoBehaviour
         experienceText.text = experienceSlider.value + "/" + experienceSlider.maxValue;
     }
 
-    public void AddScore(int score){
+    public void AddScore(int score)
+    {
         currentScore += score;
         scoreText.text = "" + currentScore;
+    }
+
+    public int GetCurrentScore()
+    {
+        return currentScore;
     }
 }
