@@ -52,6 +52,7 @@ MonoBehaviour:
   maxLives: 10
   damage: 2
   experienceToGive: 2
+  scoreToGiveOnDestroy: 1
   frames:
   - sprite:
     - {fileID: 1598534574, guid: 34406fba8763ea24c8024cb2f28bb46b, type: 3}

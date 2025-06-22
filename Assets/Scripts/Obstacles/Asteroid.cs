@@ -12,7 +12,7 @@ public class Asteroid : MonoBehaviour
     private int lives;
     private int maxLives = 5;
     private int damage = 1;
-
+    private int scoreToGiveOnDestroy = 2;
     private int experienceToGive = 1;
 
     [SerializeField] private Sprite[] sprites;
@@ -55,7 +55,7 @@ public class Asteroid : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int damage, bool giveExperience){
+    public void TakeDamage(int damage, bool giveExperience, bool giveScore){
         AudioManager.Instance.PlayModifiedSound(AudioManager.Instance.hitRock);
         lives -= damage;
         if (lives > 0)
@@ -72,6 +72,7 @@ public class Asteroid : MonoBehaviour
             flashWhite.Reset();
             gameObject.SetActive(false);
           if (giveExperience)  PlayerController.Instance.GainExperience(experienceToGive);
+           if (giveScore) UIController.Instance.AddScore(scoreToGiveOnDestroy);
         }
     }
 }

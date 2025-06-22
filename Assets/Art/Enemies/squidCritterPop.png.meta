@@ -209,20 +209,20 @@ TextureImporter:
       name: squidCritterPop_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 12
-        width: 61
-        height: 49
+        x: 0
+        y: 0
+        width: 70
+        height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d3c14d0c04a9a5640800000000000000
-      internalID: 5069533933462625341
+      spriteID: 9f1407b2877d0fd42bf0d2a7b8d2d436
+      internalID: -59449596
       vertices: []
       indices: 
       edges: []
@@ -231,20 +231,20 @@ TextureImporter:
       name: squidCritterPop_1
       rect:
         serializedVersion: 2
-        x: 77
-        y: 17
-        width: 51
-        height: 40
+        x: 70
+        y: 0
+        width: 70
+        height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: fffe0972d2c2b1d70800000000000000
-      internalID: 9014847651561140223
+      spriteID: 51eb039400fd1da4db6ab4a5f2e96f1c
+      internalID: 772580815
       vertices: []
       indices: 
       edges: []
@@ -253,20 +253,20 @@ TextureImporter:
       name: squidCritterPop_2
       rect:
         serializedVersion: 2
-        x: 147
-        y: 24
-        width: 39
-        height: 33
+        x: 140
+        y: 0
+        width: 70
+        height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b5339ae8591e76210800000000000000
-      internalID: 1326276647743730523
+      spriteID: f83c09537f1a37443aa47ba7514acd81
+      internalID: 1860120014
       vertices: []
       indices: 
       edges: []
@@ -275,20 +275,20 @@ TextureImporter:
       name: squidCritterPop_3
       rect:
         serializedVersion: 2
-        x: 227
-        y: 20
-        width: 36
-        height: 34
+        x: 210
+        y: 0
+        width: 70
+        height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3c562933c1cc94ac0800000000000000
-      internalID: -3870337983251847741
+      spriteID: ece8c96e5280d9048aa5293d2b16aa3c
+      internalID: -1776109919
       vertices: []
       indices: 
       edges: []
@@ -297,20 +297,20 @@ TextureImporter:
       name: squidCritterPop_4
       rect:
         serializedVersion: 2
-        x: 296
-        y: 20
-        width: 38
-        height: 35
+        x: 280
+        y: 0
+        width: 70
+        height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: cc3c047b162aa9f80800000000000000
-      internalID: -8098982439302413364
+      spriteID: 876b6dbec5b7b9f498cdf40ef8029048
+      internalID: 930694358
       vertices: []
       indices: 
       edges: []
@@ -319,20 +319,20 @@ TextureImporter:
       name: squidCritterPop_5
       rect:
         serializedVersion: 2
-        x: 358
-        y: 12
-        width: 55
-        height: 52
+        x: 350
+        y: 0
+        width: 70
+        height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0ce5e784341236ee0800000000000000
-      internalID: -1269134097125581120
+      spriteID: 88d60b51203d39145858e643b7d1a494
+      internalID: 1581160384
       vertices: []
       indices: 
       edges: []
@@ -341,20 +341,20 @@ TextureImporter:
       name: squidCritterPop_6
       rect:
         serializedVersion: 2
-        x: 422
-        y: 4
-        width: 67
-        height: 66
+        x: 420
+        y: 0
+        width: 70
+        height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: fb47d42dc2fcfcaf0800000000000000
-      internalID: -373852452634659649
+      spriteID: 68951cbe2bd39864eb0aa725fab4138f
+      internalID: 82666469
       vertices: []
       indices: 
       edges: []
@@ -363,9 +363,9 @@ TextureImporter:
       name: squidCritterPop_7
       rect:
         serializedVersion: 2
-        x: 489
+        x: 490
         y: 0
-        width: 72
+        width: 70
         height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -373,10 +373,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7610d5dfacc85ecd0800000000000000
-      internalID: -2529460812236652185
+      spriteID: b3421f4cf49157f4da895409ba570c64
+      internalID: -209857774
       vertices: []
       indices: 
       edges: []
@@ -395,10 +395,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7fd096da6e50b6fd0800000000000000
-      internalID: -2347776292433621513
+      spriteID: a2ef44aca5433a44ebc6f5de77e25116
+      internalID: -588508135
       vertices: []
       indices: 
       edges: []
@@ -417,10 +417,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3c03f92455e065af0800000000000000
-      internalID: -408122956877713213
+      spriteID: b6cabcf4544dedc42992487249693a3d
+      internalID: -449465884
       vertices: []
       indices: 
       edges: []
@@ -429,20 +429,20 @@ TextureImporter:
       name: squidCritterPop_10
       rect:
         serializedVersion: 2
-        x: 704
-        y: 6
-        width: 62
-        height: 58
+        x: 700
+        y: 0
+        width: 70
+        height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 321be583d5b3363d0800000000000000
-      internalID: -3214660437448675037
+      spriteID: d5df18d4ba142c641a7540460a2a97c6
+      internalID: -776310417
       vertices: []
       indices: 
       edges: []
@@ -451,20 +451,20 @@ TextureImporter:
       name: squidCritterPop_11
       rect:
         serializedVersion: 2
-        x: 774
-        y: 10
-        width: 58
-        height: 51
+        x: 770
+        y: 0
+        width: 70
+        height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4b2a52c68d9356e20800000000000000
-      internalID: 3343141900082586292
+      spriteID: 4e9eecfc1a629174e8f05b4acaec962b
+      internalID: 954449823
       vertices: []
       indices: 
       edges: []
@@ -473,20 +473,20 @@ TextureImporter:
       name: squidCritterPop_12
       rect:
         serializedVersion: 2
-        x: 847
-        y: 9
-        width: 65
-        height: 52
+        x: 840
+        y: 0
+        width: 70
+        height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 634531d48bf4c5300800000000000000
-      internalID: 242156132956853302
+      spriteID: 912598023ea2661489b23b9a78c42d70
+      internalID: -115303047
       vertices: []
       indices: 
       edges: []
@@ -495,20 +495,20 @@ TextureImporter:
       name: squidCritterPop_13
       rect:
         serializedVersion: 2
-        x: 916
-        y: 44
-        width: 23
-        height: 21
+        x: 910
+        y: 0
+        width: 70
+        height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 60945bec372901f10800000000000000
-      internalID: 2238450040890018054
+      spriteID: 34cd3f58607c33245b85322c17845de9
+      internalID: -605591543
       vertices: []
       indices: 
       edges: []
@@ -517,394 +517,20 @@ TextureImporter:
       name: squidCritterPop_14
       rect:
         serializedVersion: 2
-        x: 948
-        y: 45
-        width: 22
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 69ebc13b43b90d8e0800000000000000
-      internalID: -1670664811108843882
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squidCritterPop_15
-      rect:
-        serializedVersion: 2
-        x: 970
-        y: 42
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 81efe0deb7e248f20800000000000000
-      internalID: 3423912726501457432
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squidCritterPop_16
-      rect:
-        serializedVersion: 2
-        x: 985
-        y: 45
-        width: 24
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a72153513369128b0800000000000000
-      internalID: -5178692950356061574
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squidCritterPop_17
-      rect:
-        serializedVersion: 2
-        x: 1019
-        y: 43
-        width: 28
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b2bd0833adb59b700800000000000000
-      internalID: 556577021682047787
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squidCritterPop_18
-      rect:
-        serializedVersion: 2
-        x: 911
-        y: 31
-        width: 7
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 249581620eb46f850800000000000000
-      internalID: 6410394545692367170
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squidCritterPop_19
-      rect:
-        serializedVersion: 2
-        x: 933
-        y: 20
-        width: 20
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cea13eeda222dd8d0800000000000000
-      internalID: -2820060224140666132
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squidCritterPop_20
-      rect:
-        serializedVersion: 2
-        x: 968
-        y: 16
-        width: 14
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0fe5ffda6ce1bfbd0800000000000000
-      internalID: -2595446921577406736
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squidCritterPop_21
-      rect:
-        serializedVersion: 2
         x: 980
-        y: 31
-        width: 6
-        height: 9
+        y: 0
+        width: 70
+        height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e7b2884923d055260800000000000000
-      internalID: 7085584099628821374
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squidCritterPop_22
-      rect:
-        serializedVersion: 2
-        x: 1003
-        y: 34
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9fa68c814e343d4b0800000000000000
-      internalID: -5416911279849182471
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squidCritterPop_23
-      rect:
-        serializedVersion: 2
-        x: 1011
-        y: 26
-        width: 10
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cd11fd57baa304630800000000000000
-      internalID: 3909188984648962524
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squidCritterPop_24
-      rect:
-        serializedVersion: 2
-        x: 1040
-        y: 15
-        width: 10
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e73706092e270ccb0800000000000000
-      internalID: -4845746881640238210
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squidCritterPop_25
-      rect:
-        serializedVersion: 2
-        x: 877
-        y: 8
-        width: 10
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a925d06394ef9e680800000000000000
-      internalID: -8725163212660714854
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squidCritterPop_26
-      rect:
-        serializedVersion: 2
-        x: 915
-        y: 3
-        width: 32
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4001b6522ebccf650800000000000000
-      internalID: 6268108953543708676
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squidCritterPop_27
-      rect:
-        serializedVersion: 2
-        x: 947
-        y: 4
-        width: 11
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b2ef64f4176840360800000000000000
-      internalID: 7134975530881187371
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squidCritterPop_28
-      rect:
-        serializedVersion: 2
-        x: 984
-        y: 7
-        width: 22
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7e4d8e1c698e5c370800000000000000
-      internalID: 8342329618969711847
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squidCritterPop_29
-      rect:
-        serializedVersion: 2
-        x: 997
-        y: 3
-        width: 14
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a3f9ff9c26ea9e540800000000000000
-      internalID: 5037749397509611322
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squidCritterPop_30
-      rect:
-        serializedVersion: 2
-        x: 1010
-        y: 9
-        width: 7
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ddd2412bc9d57caa0800000000000000
-      internalID: -6140836639312433699
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squidCritterPop_31
-      rect:
-        serializedVersion: 2
-        x: 1017
-        y: 3
-        width: 12
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6294bbcdafdd4ef60800000000000000
-      internalID: 8062813302414854438
+      spriteID: fd7050d6b6bc38048a22d3060ea308f9
+      internalID: -1798814512
       vertices: []
       indices: 
       edges: []
@@ -913,7 +539,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: e21f0055e7b976d438c5d324c703ef27
     internalID: 0
     vertices: []
     indices: 
@@ -922,7 +548,22 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      squidCritterPop_0: -59449596
+      squidCritterPop_1: 772580815
+      squidCritterPop_10: -776310417
+      squidCritterPop_11: 954449823
+      squidCritterPop_12: -115303047
+      squidCritterPop_13: -605591543
+      squidCritterPop_14: -1798814512
+      squidCritterPop_2: 1860120014
+      squidCritterPop_3: -1776109919
+      squidCritterPop_4: 930694358
+      squidCritterPop_5: 1581160384
+      squidCritterPop_6: 82666469
+      squidCritterPop_7: -209857774
+      squidCritterPop_8: -588508135
+      squidCritterPop_9: -449465884
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -47,11 +47,13 @@ public class GameManager : MonoBehaviour
             AudioManager.Instance.PlaySound(AudioManager.Instance.pause);
         } else {
             UIController.Instance.pausePanel.SetActive(false);
+            OptionsUI.Instance.Hide();
             Time.timeScale = 1f;
             PlayerController.Instance.ExitBoost();
             AudioManager.Instance.PlaySound(AudioManager.Instance.unpause);
         }
     }
+
 
     public void QuitGame(){
         Application.Quit();
@@ -63,6 +65,11 @@ public class GameManager : MonoBehaviour
 
     public void GameOver(){
         StartCoroutine(ShowGameOverScreen());
+    }
+
+    public void Options()
+    {
+        OptionsUI.Instance.Show();  
     }
 
     IEnumerator ShowGameOverScreen(){

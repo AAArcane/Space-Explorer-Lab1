@@ -53,6 +53,7 @@ MonoBehaviour:
   maxLives: 1000
   damage: 20
   experienceToGive: 40
+  scoreToGiveOnDestroy: 200
 --- !u!212 &2198923998956553960
 SpriteRenderer:
   m_ObjectHideFlags: 0

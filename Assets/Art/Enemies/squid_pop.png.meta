@@ -279,19 +279,19 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 247
-        width: 121
-        height: 113
+        y: 240
+        width: 120
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: fcad107ea76e3a2e0800000000000000
-      internalID: -2115593984397944113
+      spriteID: 1cb326ce6477655449a7f5e9aae989d2
+      internalID: -1566671115
       vertices: []
       indices: 
       edges: []
@@ -300,20 +300,20 @@ TextureImporter:
       name: squid_pop_1
       rect:
         serializedVersion: 2
-        x: 119
-        y: 254
-        width: 482
-        height: 106
+        x: 120
+        y: 240
+        width: 120
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e8b2fd98154333630800000000000000
-      internalID: 3905522826670451598
+      spriteID: 09282dface7c90346a45b0ef965e2fcf
+      internalID: -839884981
       vertices: []
       indices: 
       edges: []
@@ -322,20 +322,20 @@ TextureImporter:
       name: squid_pop_2
       rect:
         serializedVersion: 2
-        x: 600
-        y: 276
+        x: 240
+        y: 240
         width: 120
-        height: 81
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d868ff4e0a13aaf30800000000000000
-      internalID: 4587533737536751245
+      spriteID: 5228df11980c2474e955760d404df282
+      internalID: -483213222
       vertices: []
       indices: 
       edges: []
@@ -344,20 +344,20 @@ TextureImporter:
       name: squid_pop_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 156
-        width: 121
-        height: 81
+        x: 360
+        y: 240
+        width: 120
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 600638712f4bacd70800000000000000
-      internalID: 9064256151906115590
+      spriteID: dd60ef2c3e2ca224fa79d4cd59d0046c
+      internalID: -1981761268
       vertices: []
       indices: 
       edges: []
@@ -366,20 +366,20 @@ TextureImporter:
       name: squid_pop_4
       rect:
         serializedVersion: 2
-        x: 120
-        y: 157
-        width: 121
-        height: 76
+        x: 480
+        y: 240
+        width: 120
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 923383ae56ffe68c0800000000000000
-      internalID: -4003982205499460823
+      spriteID: ae87a2ed89b21444c900e06e1ad39a68
+      internalID: 1035700855
       vertices: []
       indices: 
       edges: []
@@ -388,20 +388,20 @@ TextureImporter:
       name: squid_pop_5
       rect:
         serializedVersion: 2
-        x: 240
-        y: 159
-        width: 121
-        height: 70
+        x: 600
+        y: 240
+        width: 120
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 60e01730a75312310800000000000000
-      internalID: 1378441759112105478
+      spriteID: cbc96133214508049ac3cc11aa6a9007
+      internalID: 1832104393
       vertices: []
       indices: 
       edges: []
@@ -410,20 +410,20 @@ TextureImporter:
       name: squid_pop_6
       rect:
         serializedVersion: 2
-        x: 372
-        y: 163
-        width: 99
-        height: 55
+        x: 0
+        y: 120
+        width: 120
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3d9f5c291fa4f2530800000000000000
-      internalID: 3832364209325603283
+      spriteID: 2ef2d01db8c55db42a804fa48ec8308c
+      internalID: -1897540869
       vertices: []
       indices: 
       edges: []
@@ -432,20 +432,20 @@ TextureImporter:
       name: squid_pop_7
       rect:
         serializedVersion: 2
-        x: 502
-        y: 162
-        width: 75
-        height: 45
+        x: 120
+        y: 120
+        width: 120
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9a9887ae47ae4db80800000000000000
-      internalID: -8370808019504035415
+      spriteID: bb8f1b75c8be5f140bd84e594b965544
+      internalID: -2051773809
       vertices: []
       indices: 
       edges: []
@@ -454,20 +454,20 @@ TextureImporter:
       name: squid_pop_8
       rect:
         serializedVersion: 2
-        x: 633
-        y: 158
-        width: 53
-        height: 47
+        x: 240
+        y: 120
+        width: 120
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4c6603b49622f4b00800000000000000
-      internalID: 814907893205722820
+      spriteID: c7af2a2e1eefbeb4e94b51e998d36a50
+      internalID: 1262421218
       vertices: []
       indices: 
       edges: []
@@ -476,20 +476,20 @@ TextureImporter:
       name: squid_pop_9
       rect:
         serializedVersion: 2
-        x: 136
-        y: 26
-        width: 86
-        height: 71
+        x: 360
+        y: 120
+        width: 120
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 56a7e61950f20f4c0800000000000000
-      internalID: -4255849946903840155
+      spriteID: 92d3d29656d192243b19573ab7599f49
+      internalID: -655537572
       vertices: []
       indices: 
       edges: []
@@ -498,20 +498,20 @@ TextureImporter:
       name: squid_pop_10
       rect:
         serializedVersion: 2
-        x: 261
-        y: 62
-        width: 42
-        height: 42
+        x: 480
+        y: 120
+        width: 120
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 01880f808a2681080800000000000000
-      internalID: -9216508163569711088
+      spriteID: d89269808aaba914fb4aab0dae4bd1dc
+      internalID: 2142011232
       vertices: []
       indices: 
       edges: []
@@ -520,20 +520,20 @@ TextureImporter:
       name: squid_pop_11
       rect:
         serializedVersion: 2
-        x: 300
-        y: 67
-        width: 42
-        height: 32
+        x: 600
+        y: 120
+        width: 120
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e108b47dc3e385470800000000000000
-      internalID: 8383519137381187614
+      spriteID: 56c9e69ee41b4cb428c634784380c144
+      internalID: 1446787609
       vertices: []
       indices: 
       edges: []
@@ -542,20 +542,20 @@ TextureImporter:
       name: squid_pop_12
       rect:
         serializedVersion: 2
-        x: 379
-        y: 71
-        width: 35
-        height: 32
+        x: 0
+        y: 0
+        width: 120
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a5aa4eac74a0cb7d0800000000000000
-      internalID: -2901432756470502822
+      spriteID: 334357797382ed64daedd66a58d106b4
+      internalID: 1027921836
       vertices: []
       indices: 
       edges: []
@@ -564,20 +564,20 @@ TextureImporter:
       name: squid_pop_13
       rect:
         serializedVersion: 2
-        x: 426
-        y: 76
-        width: 33
-        height: 26
+        x: 120
+        y: 0
+        width: 120
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0712eaa140d789370800000000000000
-      internalID: 8329544967402692976
+      spriteID: 2acc444d3052b364fb338ccf5d650f4c
+      internalID: -64292409
       vertices: []
       indices: 
       edges: []
@@ -586,20 +586,20 @@ TextureImporter:
       name: squid_pop_14
       rect:
         serializedVersion: 2
-        x: 491
-        y: 78
-        width: 38
-        height: 32
+        x: 240
+        y: 0
+        width: 120
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 5f6593800777765b0800000000000000
-      internalID: -5375196307185379595
+      spriteID: 8a6df35357807fa40b2dc8b99d1b800b
+      internalID: -828477300
       vertices: []
       indices: 
       edges: []
@@ -608,20 +608,20 @@ TextureImporter:
       name: squid_pop_15
       rect:
         serializedVersion: 2
-        x: 547
-        y: 78
-        width: 35
-        height: 31
+        x: 360
+        y: 0
+        width: 120
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b53ef16abe60be230800000000000000
-      internalID: 3669033930597589851
+      spriteID: ebfeaaff2ee5ea945ab9d4d2cf67edbd
+      internalID: -1078791711
       vertices: []
       indices: 
       edges: []
@@ -630,20 +630,20 @@ TextureImporter:
       name: squid_pop_16
       rect:
         serializedVersion: 2
-        x: 609
-        y: 79
-        width: 39
-        height: 34
+        x: 480
+        y: 0
+        width: 120
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 5424844af75a47da0800000000000000
-      internalID: -5947947240213953979
+      spriteID: ef1e51528c941a14d9b27002b7966566
+      internalID: 1526939316
       vertices: []
       indices: 
       edges: []
@@ -652,834 +652,20 @@ TextureImporter:
       name: squid_pop_17
       rect:
         serializedVersion: 2
-        x: 667
-        y: 92
-        width: 34
-        height: 21
+        x: 600
+        y: 0
+        width: 120
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: bee7804488dd5fac0800000000000000
-      internalID: -3821905131427299605
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squid_pop_18
-      rect:
-        serializedVersion: 2
-        x: 696
-        y: 80
-        width: 10
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1edce3b9b503f8dd0800000000000000
-      internalID: -2481711699653112351
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squid_pop_19
-      rect:
-        serializedVersion: 2
-        x: 29
-        y: 33
-        width: 59
-        height: 56
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 191585b3f957be790800000000000000
-      internalID: -7499771427699535471
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squid_pop_20
-      rect:
-        serializedVersion: 2
-        x: 251
-        y: 68
-        width: 11
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 43980d1f00db7c6d0800000000000000
-      internalID: -2970197617472927436
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squid_pop_21
-      rect:
-        serializedVersion: 2
-        x: 446
-        y: 68
-        width: 8
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 03750ded8e33839f0800000000000000
-      internalID: -488583484306073808
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squid_pop_22
-      rect:
-        serializedVersion: 2
-        x: 584
-        y: 74
-        width: 7
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 69f0177e7acb5c8a0800000000000000
-      internalID: -6285410275597152362
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squid_pop_23
-      rect:
-        serializedVersion: 2
-        x: 707
-        y: 75
-        width: 7
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 56e1029624763bd00800000000000000
-      internalID: 987246278253485669
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squid_pop_24
-      rect:
-        serializedVersion: 2
-        x: 248
-        y: 34
-        width: 36
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8457fd209b0f8c7d0800000000000000
-      internalID: -2897801682805099192
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squid_pop_25
-      rect:
-        serializedVersion: 2
-        x: 310
-        y: 62
-        width: 15
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5127ab27c5b21c3f0800000000000000
-      internalID: -882376375926099435
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squid_pop_26
-      rect:
-        serializedVersion: 2
-        x: 310
-        y: 32
-        width: 33
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d76ddfd8175bf1860800000000000000
-      internalID: 7502915003540690557
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squid_pop_27
-      rect:
-        serializedVersion: 2
-        x: 372
-        y: 39
-        width: 16
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0dd798f1e369377e0800000000000000
-      internalID: -1768905035065229872
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squid_pop_28
-      rect:
-        serializedVersion: 2
-        x: 446
-        y: 30
-        width: 36
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f9367981101ac3910800000000000000
-      internalID: 1818505375630451615
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squid_pop_29
-      rect:
-        serializedVersion: 2
-        x: 484
-        y: 54
-        width: 9
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2af870bd41c6dfe70800000000000000
-      internalID: 9150588854716567458
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squid_pop_30
-      rect:
-        serializedVersion: 2
-        x: 521
-        y: 35
-        width: 28
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f70275fca58cc7ae0800000000000000
-      internalID: -1550143879371087745
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squid_pop_31
-      rect:
-        serializedVersion: 2
-        x: 580
-        y: 29
-        width: 22
-        height: 37
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cc8c8eb00a71b0380800000000000000
-      internalID: -9004077053835163444
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squid_pop_32
-      rect:
-        serializedVersion: 2
-        x: 601
-        y: 54
-        width: 9
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0321bcc2199126e80800000000000000
-      internalID: -8186953061293682128
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squid_pop_33
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 61
-        width: 9
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 043c1d0666a130990800000000000000
-      internalID: -7421058733963099328
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squid_pop_34
-      rect:
-        serializedVersion: 2
-        x: 704
-        y: 26
-        width: 16
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cd4d7e9c9e0a82f80800000000000000
-      internalID: -8131072201242192676
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squid_pop_35
-      rect:
-        serializedVersion: 2
-        x: 444
-        y: 54
-        width: 15
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f86f4442ce7dbe8f0800000000000000
-      internalID: -510076723555666289
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squid_pop_36
-      rect:
-        serializedVersion: 2
-        x: 258
-        y: 18
-        width: 41
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 01e36240d6a7f8de0800000000000000
-      internalID: -1328708756411367920
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squid_pop_37
-      rect:
-        serializedVersion: 2
-        x: 638
-        y: 39
-        width: 6
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2b42a0e18f593a310800000000000000
-      internalID: 1415139600812876978
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squid_pop_38
-      rect:
-        serializedVersion: 2
-        x: 663
-        y: 47
-        width: 7
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9afff11c2550b4390800000000000000
-      internalID: -7833161273895288919
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squid_pop_39
-      rect:
-        serializedVersion: 2
-        x: 298
-        y: 19
-        width: 17
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 966fc7a2ab3378540800000000000000
-      internalID: 5010029985142732393
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squid_pop_40
-      rect:
-        serializedVersion: 2
-        x: 378
-        y: 15
-        width: 40
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3287e336243bd7b80800000000000000
-      internalID: -8395357032634484701
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squid_pop_41
-      rect:
-        serializedVersion: 2
-        x: 398
-        y: 38
-        width: 8
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bfb3fc9650d282240800000000000000
-      internalID: 4767109706844945403
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squid_pop_42
-      rect:
-        serializedVersion: 2
-        x: 654
-        y: 32
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 40a236452acce3ea0800000000000000
-      internalID: -5891046264981476860
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squid_pop_43
-      rect:
-        serializedVersion: 2
-        x: 325
-        y: 25
-        width: 14
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ebd83268afc084b10800000000000000
-      internalID: 1965835507479055806
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squid_pop_44
-      rect:
-        serializedVersion: 2
-        x: 414
-        y: 24
-        width: 8
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0fa09e1f23c9422c0800000000000000
-      internalID: -4457265988569068816
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squid_pop_45
-      rect:
-        serializedVersion: 2
-        x: 424
-        y: 15
-        width: 14
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6b78f0a93291ca5c0800000000000000
-      internalID: -4202956711544256586
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squid_pop_46
-      rect:
-        serializedVersion: 2
-        x: 453
-        y: 23
-        width: 10
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a2bf61d3deebcf460800000000000000
-      internalID: 7276901024065321770
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squid_pop_47
-      rect:
-        serializedVersion: 2
-        x: 490
-        y: 16
-        width: 23
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e776104a4bca7c8a0800000000000000
-      internalID: -6284864863126591618
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squid_pop_48
-      rect:
-        serializedVersion: 2
-        x: 533
-        y: 21
-        width: 9
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 758e5349caa77c200800000000000000
-      internalID: 200263590080800855
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squid_pop_49
-      rect:
-        serializedVersion: 2
-        x: 608
-        y: 14
-        width: 23
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d187607298617ba20800000000000000
-      internalID: 3077953648652089373
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squid_pop_50
-      rect:
-        serializedVersion: 2
-        x: 652
-        y: 18
-        width: 10
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4ff14e93d2471dc50800000000000000
-      internalID: 6688254659215499252
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squid_pop_51
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 8
-        width: 21
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 98e3e8f87f817c030800000000000000
-      internalID: 3514805485730414217
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squid_pop_52
-      rect:
-        serializedVersion: 2
-        x: 544
-        y: 8
-        width: 17
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2e367418a83cd9e10800000000000000
-      internalID: 2206134392123253730
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squid_pop_53
-      rect:
-        serializedVersion: 2
-        x: 630
-        y: 5
-        width: 22
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8e584ba4be9295750800000000000000
-      internalID: 6294108044774376936
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: squid_pop_54
-      rect:
-        serializedVersion: 2
-        x: 665
-        y: 5
-        width: 18
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3e619e7293e947c50800000000000000
-      internalID: 6662123717107717859
+      spriteID: 35a2ecffba088dc4a9cf136b10fb8611
+      internalID: 1665072511
       vertices: []
       indices: 
       edges: []
@@ -1488,7 +674,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: ffb1ed64e2126d045846a77921aa30c4
     internalID: 0
     vertices: []
     indices: 
@@ -1497,7 +683,25 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      squid_pop_0: -1566671115
+      squid_pop_1: -839884981
+      squid_pop_10: 2142011232
+      squid_pop_11: 1446787609
+      squid_pop_12: 1027921836
+      squid_pop_13: -64292409
+      squid_pop_14: -828477300
+      squid_pop_15: -1078791711
+      squid_pop_16: 1526939316
+      squid_pop_17: 1665072511
+      squid_pop_2: -483213222
+      squid_pop_3: -1981761268
+      squid_pop_4: 1035700855
+      squid_pop_5: 1832104393
+      squid_pop_6: -1897540869
+      squid_pop_7: -2051773809
+      squid_pop_8: 1262421218
+      squid_pop_9: -655537572
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

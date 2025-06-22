@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] protected int maxLives;
     [SerializeField] protected int damage;
     [SerializeField] protected int experienceToGive;
-
+    [SerializeField] protected int scoreToGiveOnDestroy;
     protected AudioSource hitSound;
     protected AudioSource destroySound;
 
@@ -27,6 +27,7 @@ public class Enemy : MonoBehaviour
     public virtual void Start()
     {
         flashWhite = GetComponent<FlashWhite>();
+
     }
     public virtual void Update()
     {
@@ -55,9 +56,10 @@ public class Enemy : MonoBehaviour
             AudioManager.Instance.PlayModifiedSound(destroySound);
             flashWhite.Reset();
             GameObject destroyEffect = destroyEffectPool.GetPooledObject();
-            destroyEffectPool.transform.position = transform.position;
+            destroyEffectPool.transform.position = transform.position;  
             destroyEffectPool.transform.rotation = transform.rotation;
             destroyEffect.SetActive(true);
+            UIController.Instance.AddScore(scoreToGiveOnDestroy);
             PlayerController.Instance.GainExperience(experienceToGive);
             gameObject.SetActive(false);
         }

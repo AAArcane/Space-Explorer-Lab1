@@ -12,15 +12,23 @@ public class UIController : MonoBehaviour
     [SerializeField] private TMP_Text healthText;
     [SerializeField] private Slider experienceSlider;
     [SerializeField] private TMP_Text experienceText;
+
+   
+    [SerializeField] private TextMeshProUGUI scoreText;
     public GameObject pausePanel;
 
+    private int currentScore;
+
     void Awake(){
+        currentScore = 0;
         if (Instance != null){
             Destroy(gameObject);
         } else {
             Instance = this;
         }
     }
+
+    
 
     public void UpdateEnergySlider(float current, float max){
         energySlider.maxValue = max;
@@ -39,5 +47,10 @@ public class UIController : MonoBehaviour
         experienceSlider.maxValue = max;
         experienceSlider.value = Mathf.RoundToInt(current);
         experienceText.text = experienceSlider.value + "/" + experienceSlider.maxValue;
+    }
+
+    public void AddScore(int score){
+        currentScore += score;
+        scoreText.text = "" + currentScore;
     }
 }

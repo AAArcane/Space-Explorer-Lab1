@@ -91,7 +91,7 @@ public class Boss1 : Enemy
         base.OnCollisionEnter2D(collision);
         if (collision.gameObject.CompareTag("Obstacle")){
             Asteroid asteroid = collision.gameObject.GetComponent<Asteroid>();
-            if (asteroid) asteroid.TakeDamage(damage, false);
+            if (asteroid) asteroid.TakeDamage(damage, false, false);
         }
     }
 

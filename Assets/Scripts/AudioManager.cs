@@ -1,8 +1,14 @@
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;
+
+    public AudioSource musicSource; // Add this for background music
+    public AudioMixer audioMixer;
+    private float _soundEffectsVolume = 1f;
+    private float _musicVolume = 1f;
 
     public AudioSource ice;
     public AudioSource fire;
@@ -22,23 +28,59 @@ public class AudioManager : MonoBehaviour
     public AudioSource locusCharge;
     public AudioSource locusHit;
     public AudioSource locusDestroy;
+    public AudioSource squidDestroy;
+    public AudioSource squidDestroy2;
+    public AudioSource squidHit;
+    public AudioSource squidHit2;
+    public AudioSource squidShoot;
+    public AudioSource squidShoot2;
+    public AudioSource squidShoot3;
 
-    void Awake(){
-        if (Instance != null){
+    void Awake()
+    {
+        if (Instance != null)
+        {
             Destroy(gameObject);
-        } else {
+        }
+        else
+        {
             Instance = this;
+            DontDestroyOnLoad(gameObject); // Optional: persist across scenes
+        }
+
+        // Initialize music volume from source
+        if (musicSource != null)
+        {
+            _musicVolume = musicSource.volume;
         }
     }
 
     public void PlaySound(AudioSource sound){
+        sound.volume = _soundEffectsVolume;
         sound.Stop();
         sound.Play();
     }
 
     public void PlayModifiedSound(AudioSource sound){
+        sound.volume = _soundEffectsVolume;
         sound.pitch = Random.Range(0.7f, 1.3f);
         sound.Stop();
         sound.Play();
     }
+
+    public void SetSoundEffectsVolume(float volume)
+    {
+        _soundEffectsVolume = volume;
+    }
+
+    public void SetMusicVolume(float volume)
+    {
+        _musicVolume = volume;
+        if (musicSource != null)
+        {
+            musicSource.volume = _musicVolume;
+        }
+    }
+    public float GetSoundEffectsVolume() => _soundEffectsVolume;
+    public float GetMusicVolume() => _musicVolume;
 }
