@@ -1,10 +1,25 @@
 fileFormatVersion: 2
-guid: fe4ed8873fd79fc43b3c360331ad58bc
+guid: 34406fba8763ea24c8024cb2f28bb46b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2357709100146644040
-    second: asteroid_sprite_0
+      213: 987648193118723531
+    second: locustmorph_0
+  - first:
+      213: -1182288027662524906
+    second: locustmorph_1
+  - first:
+      213: 746690809680363692
+    second: locustmorph_2
+  - first:
+      213: 216214826535000004
+    second: locustmorph_3
+  - first:
+      213: -7989817001677814027
+    second: locustmorph_4
+  - first:
+      213: -7408264423918629294
+    second: locustmorph_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +111,118 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: asteroid_sprite_0
+      name: locustmorph_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 120
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c36bc8d3b0d3cb4f82bad94f6136cd9
+      internalID: 1598534574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locustmorph_1
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 120
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4f35e959395b7e47807e052b253a467
+      internalID: 1503372357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locustmorph_2
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 120
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00b32d14fc8d2b144bcef7b7828a05f4
+      internalID: -463272989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locustmorph_3
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 120
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d16010c453b0c1f48a0f518dca8e8d73
+      internalID: -1945630776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locustmorph_4
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 250
-        height: 248
+        width: 120
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,20 +231,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a1b8a9117c40ad4aad0504d82cad7d9
-      internalID: -1508413030
+      spriteID: 762ad55f4e7ca494594d5adc60a79d21
+      internalID: -1938397688
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: asteroid_sprite_1
+      name: locustmorph_5
       rect:
         serializedVersion: 2
-        x: 250
+        x: 120
         y: 0
-        width: 250
-        height: 248
+        width: 120
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +253,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 113171ca779a59c44ad0f83d9976c1a9
-      internalID: -298929065
+      spriteID: f9b5b8cbb76d9904ab4b6df9373c4dad
+      internalID: -1573248583
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: asteroid_sprite_2
+      name: locustmorph_6
       rect:
         serializedVersion: 2
-        x: 500
+        x: 240
         y: 0
-        width: 250
-        height: 248
+        width: 120
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,20 +275,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3601f4cdca022d4458148faef9028a14
-      internalID: -95494211
+      spriteID: 1d64b76707f5a0a4ea59c687a0ce3da4
+      internalID: 1841656305
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: asteroid_sprite_3
+      name: locustmorph_7
       rect:
         serializedVersion: 2
-        x: 750
+        x: 360
         y: 0
-        width: 250
-        height: 248
+        width: 120
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,30 +297,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ff269fedf29dff4387247a0957f84ba
-      internalID: -1091278505
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: asteroid_sprite_4
-      rect:
-        serializedVersion: 2
-        x: 1000
-        y: 0
-        width: 250
-        height: 248
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f51de73b12dfc3a4798b5d1ca8595f72
-      internalID: -1382766413
+      spriteID: 6e8a9cc16028bcb4e8b0adf62d1ef237
+      internalID: -1807415396
       vertices: []
       indices: 
       edges: []
@@ -213,7 +307,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 1c5849849a013f840ab0d79e0a04a867
+    spriteID: 316f47b586f82cd43af453ba17552df8
     internalID: 0
     vertices: []
     indices: 
@@ -223,11 +317,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      asteroid_sprite_0: -1508413030
-      asteroid_sprite_1: -298929065
-      asteroid_sprite_2: -95494211
-      asteroid_sprite_3: -1091278505
-      asteroid_sprite_4: -1382766413
+      locustmorph_0: 1598534574
+      locustmorph_1: 1503372357
+      locustmorph_2: -463272989
+      locustmorph_3: -1945630776
+      locustmorph_4: -1938397688
+      locustmorph_5: -1573248583
+      locustmorph_6: 1841656305
+      locustmorph_7: -1807415396
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

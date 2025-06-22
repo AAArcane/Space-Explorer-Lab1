@@ -17,7 +17,8 @@ public class AudioManager : MonoBehaviour
     public AudioSource hitArmor;
     public AudioSource bossCharge;
     public AudioSource bossSpawn;
-
+    public AudioSource beetleDestroy;
+    public AudioSource beetleHit;
     void Awake(){
         if (Instance != null){
             Destroy(gameObject);

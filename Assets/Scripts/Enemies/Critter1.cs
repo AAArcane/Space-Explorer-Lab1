@@ -4,7 +4,7 @@ public class Critter1 : MonoBehaviour
 {
     private SpriteRenderer spriteRenderer;
     [SerializeField] private Sprite[] sprites;
-
+    
     private float moveSpeed;
     private Vector3 targetPosition;
     private Quaternion targetRotation;

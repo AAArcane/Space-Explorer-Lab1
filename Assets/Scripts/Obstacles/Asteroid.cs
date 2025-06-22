@@ -10,33 +10,41 @@ public class Asteroid : MonoBehaviour
     private ObjectPooler destroyEffectPool;
 
     private int lives;
-    private int maxLives;
-    private int damage;
+    private int maxLives = 5;
+    private int damage = 1;
+
+    private int experienceToGive = 1;
 
     [SerializeField] private Sprite[] sprites;
+    float pushX ;
+    float pushY;
 
     private void OnEnable()
     {
         lives = maxLives;
         transform.rotation = Quaternion.identity;
+         pushX = Random.Range(-1f, 0);
+         pushY = Random.Range(-1f, 1f);
+       if (rb) rb.linearVelocity = new Vector2(pushX, pushY);
+
 
     }
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
+        pushX = Random.Range(-1f, 0);
+        pushY = Random.Range(-1f, 1f);
+        if (rb) rb.linearVelocity = new Vector2(pushX, pushY);
         flashWhite = GetComponent<FlashWhite>();
         destroyEffectPool = GameObject.Find("Boom2Pool").GetComponent<ObjectPooler>();
 
         spriteRenderer.sprite = sprites[Random.Range(0, sprites.Length)];
-        float pushX = Random.Range(-1f,0);
-        float pushY = Random.Range(-1f,1f);
-        rb.linearVelocity = new Vector2(pushX,pushY);
+ 
         float randomScale = Random.Range(0.6f, 1f);
         transform.localScale = new Vector2(randomScale, randomScale);
 
-        maxLives = 5;
-        damage = 1;
+        lives = maxLives;
     }
     
     private void OnCollisionEnter2D(Collision2D collision)
@@ -47,11 +55,14 @@ public class Asteroid : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int damage){
+    public void TakeDamage(int damage, bool giveExperience){
         AudioManager.Instance.PlayModifiedSound(AudioManager.Instance.hitRock);
         lives -= damage;
-        flashWhite.Flash();
-        if (lives <= 0){
+        if (lives > 0)
+        {
+            flashWhite.Flash();
+        }
+        else {
             GameObject destroyEffect = destroyEffectPool.GetPooledObject();
             destroyEffect.transform.position = transform.position;
             destroyEffect.transform.rotation = transform.rotation;
@@ -60,6 +71,7 @@ public class Asteroid : MonoBehaviour
             AudioManager.Instance.PlayModifiedSound(AudioManager.Instance.boom2);
             flashWhite.Reset();
             gameObject.SetActive(false);
+          if (giveExperience)  PlayerController.Instance.GainExperience(experienceToGive);
         }
     }
 }

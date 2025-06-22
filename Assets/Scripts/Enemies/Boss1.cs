@@ -13,7 +13,7 @@ public class Boss1 : MonoBehaviour
     private int lives;
     private int maxLives = 100;
     private int damage = 20;
-
+    private int experienceToGive = 20;
 
     private ObjectPooler destroyEffectPool;
 
@@ -93,7 +93,7 @@ public class Boss1 : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Obstacle")){
             Asteroid asteroid = collision.gameObject.GetComponent<Asteroid>();
-            if (asteroid) asteroid.TakeDamage(damage);
+            if (asteroid) asteroid.TakeDamage(damage, false);
         } else if (collision.gameObject.CompareTag("Player")){
             PlayerController player = collision.gameObject.GetComponent<PlayerController>();
             if (player) player.TakeDamage(damage);
@@ -110,8 +110,7 @@ public class Boss1 : MonoBehaviour
             destroyEffect.SetActive(true);
             AudioManager.Instance.PlayModifiedSound(AudioManager.Instance.boom2);
             gameObject.SetActive(false);
-        } else {
-            animator.SetTrigger("hit");
+            PlayerController.Instance.GainExperience(experienceToGive);
         }
+    } 
     }
-}
