@@ -5,16 +5,20 @@ public class Enemy : MonoBehaviour
     protected SpriteRenderer spriteRenderer;
     private FlashWhite flashWhite;
     protected ObjectPooler destroyEffectPool;
-    [SerializeField] private int lives;
-    [SerializeField] private int maxLives;
-    [SerializeField] private int damage;
-    [SerializeField] private int experienceToGive;
+    [SerializeField] protected int lives;
+    [SerializeField] protected int maxLives;
+    [SerializeField] protected int damage;
+    [SerializeField] protected int experienceToGive;
 
     protected AudioSource hitSound;
     protected AudioSource destroySound;
 
     protected float speedX = 0f;
     protected float speedY = 0f;
+    public virtual void Awake()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
     public virtual void OnEnable()
     {
         lives = maxLives;
@@ -22,10 +26,13 @@ public class Enemy : MonoBehaviour
     }
     public virtual void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
         flashWhite = GetComponent<FlashWhite>();
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    public virtual void Update()
+    {
+        transform.position += new Vector3(speedX * Time.deltaTime, speedY * Time.deltaTime);
+    }
+    public virtual void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
@@ -34,14 +41,12 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public virtual void Update()
+  
+    public virtual void TakeDamage(int damage)
     {
-        transform.position += new Vector3(speedX * Time.deltaTime, speedY * Time.deltaTime);
-    }
-    public void TakeDamage(int damage)
-    {
-        AudioManager.Instance.PlayModifiedSound(hitSound);
         lives -= damage;
+
+        AudioManager.Instance.PlayModifiedSound(hitSound);
        if (lives > 0)
         {
             flashWhite.Flash();

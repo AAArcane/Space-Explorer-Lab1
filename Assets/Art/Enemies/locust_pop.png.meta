@@ -1,0 +1,742 @@
+fileFormatVersion: 2
+guid: 4b6332a08e6f3f34fa2a71c6553558cd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7357094842179682256
+    second: locust_pop_0
+  - first:
+      213: 8095614185542569604
+    second: locust_pop_1
+  - first:
+      213: -1825048713549105610
+    second: locust_pop_2
+  - first:
+      213: 242786211193473211
+    second: locust_pop_3
+  - first:
+      213: 8590371553066374783
+    second: locust_pop_4
+  - first:
+      213: 6506746481793786337
+    second: locust_pop_5
+  - first:
+      213: -6377505052577112096
+    second: locust_pop_6
+  - first:
+      213: 1821661975250052489
+    second: locust_pop_7
+  - first:
+      213: -458684889083802105
+    second: locust_pop_8
+  - first:
+      213: 3528946508824689653
+    second: locust_pop_9
+  - first:
+      213: -5642084895070886831
+    second: locust_pop_10
+  - first:
+      213: -728997796934376641
+    second: locust_pop_11
+  - first:
+      213: 2159393883075482833
+    second: locust_pop_12
+  - first:
+      213: 519884021595721884
+    second: locust_pop_13
+  - first:
+      213: -8881123972000813605
+    second: locust_pop_14
+  - first:
+      213: -7363560318529639397
+    second: locust_pop_15
+  - first:
+      213: -1202541408211626682
+    second: locust_pop_16
+  - first:
+      213: -5615770992586800073
+    second: locust_pop_17
+  - first:
+      213: 1694019613905442949
+    second: locust_pop_18
+  - first:
+      213: 6994633630477661081
+    second: locust_pop_19
+  - first:
+      213: -6945221973057719511
+    second: locust_pop_20
+  - first:
+      213: -8581992756481901219
+    second: locust_pop_21
+  - first:
+      213: -3099701468314589698
+    second: locust_pop_22
+  - first:
+      213: -3906718055304269881
+    second: locust_pop_23
+  - first:
+      213: -9123505051881267055
+    second: locust_pop_24
+  - first:
+      213: -1662778091344061164
+    second: locust_pop_25
+  - first:
+      213: -4747292275655703618
+    second: locust_pop_26
+  - first:
+      213: 3453364730416474657
+    second: locust_pop_27
+  - first:
+      213: -9049901475072914980
+    second: locust_pop_28
+  - first:
+      213: -8898641262658332506
+    second: locust_pop_29
+  - first:
+      213: 2328573231427674565
+    second: locust_pop_30
+  - first:
+      213: -7405471491151085806
+    second: locust_pop_31
+  - first:
+      213: -3390850179843342028
+    second: locust_pop_32
+  - first:
+      213: 5496504993128779405
+    second: locust_pop_33
+  - first:
+      213: 1278896608633477790
+    second: locust_pop_34
+  - first:
+      213: -5058834235800855400
+    second: locust_pop_35
+  - first:
+      213: 1230496979555668595
+    second: locust_pop_36
+  - first:
+      213: -5517562053661903624
+    second: locust_pop_37
+  - first:
+      213: -2121455558476921897
+    second: locust_pop_38
+  - first:
+      213: 4964911990183484319
+    second: locust_pop_39
+  - first:
+      213: 9046653824102509592
+    second: locust_pop_40
+  - first:
+      213: -1768461092266596445
+    second: locust_pop_41
+  - first:
+      213: 1796977380369048216
+    second: locust_pop_42
+  - first:
+      213: 6150341737766656864
+    second: locust_pop_43
+  - first:
+      213: -1496844620010644881
+    second: locust_pop_44
+  - first:
+      213: 6469700399998530924
+    second: locust_pop_45
+  - first:
+      213: 2384599725718402459
+    second: locust_pop_46
+  - first:
+      213: -2458909383997328734
+    second: locust_pop_47
+  - first:
+      213: 4671868277815650317
+    second: locust_pop_48
+  - first:
+      213: 890956550423671885
+    second: locust_pop_49
+  - first:
+      213: -6126525330708904958
+    second: locust_pop_50
+  - first:
+      213: -6315597347519796022
+    second: locust_pop_51
+  - first:
+      213: -7199283282808938025
+    second: locust_pop_52
+  - first:
+      213: 5838237890686722539
+    second: locust_pop_53
+  - first:
+      213: -3922075824402194141
+    second: locust_pop_54
+  - first:
+      213: -1026824039997067234
+    second: locust_pop_55
+  - first:
+      213: 8559473532880394174
+    second: locust_pop_56
+  - first:
+      213: -4425734605246007369
+    second: locust_pop_57
+  - first:
+      213: 8360175734945198779
+    second: locust_pop_58
+  - first:
+      213: -8333304459476776678
+    second: locust_pop_59
+  - first:
+      213: 5229681030194561941
+    second: locust_pop_60
+  - first:
+      213: 8416799220027855128
+    second: locust_pop_61
+  - first:
+      213: -1640821928505547451
+    second: locust_pop_62
+  - first:
+      213: 5036843987564212603
+    second: locust_pop_63
+  - first:
+      213: 6115537418803813818
+    second: locust_pop_64
+  - first:
+      213: 3354028729295758077
+    second: locust_pop_65
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: locust_pop_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 240
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 697be4087a09531458ae0beec3a2edf4
+      internalID: 480110172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locust_pop_1
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 240
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3f483ebae696084a9d1ea3c430c3430
+      internalID: 1442802958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locust_pop_2
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 240
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c655c0a52f52f348b93cf475cdf3964
+      internalID: 1272366393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locust_pop_3
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 240
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c150d00eb19888b43bfc4317c7e14838
+      internalID: 1521609380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locust_pop_4
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 240
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37b5ada7ed3f92146b18d397f30f9395
+      internalID: -1439202984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locust_pop_5
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 240
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca864df93b6e95d4490897ce126efd99
+      internalID: -731534774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locust_pop_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 120
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55a38ea2c0a072f438f68f73b6b2b5ef
+      internalID: -1787466599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locust_pop_7
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 120
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56cd2f625b138f443a6555efe04930fb
+      internalID: 1030191349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locust_pop_8
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 120
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 588c61ce5e60c9441ac859ab754d9664
+      internalID: 1326277030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locust_pop_9
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 120
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dbf502fb8a318a4d9ffd55c55427b0a
+      internalID: 405278216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locust_pop_10
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 120
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaeec464bc07a734d81bbd0509a3f669
+      internalID: 1034543336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locust_pop_11
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 120
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e05aa05a7eb63f64eba1fa4c346ecbf5
+      internalID: 719639556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locust_pop_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec56e250a2dbfe74ea56e044b150cc9e
+      internalID: -1282852863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locust_pop_13
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 0
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aefd6d10bb8cc6c45ad022424bea3283
+      internalID: -1074177900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locust_pop_14
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 168f6b1d682552944af92fd0a08fbfb8
+      internalID: 1213287877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locust_pop_15
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 0
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cff27d3903c658a4ab192ebb6dcb836f
+      internalID: 110307368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locust_pop_16
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbec7c8a668dcdb4f8d7b519c6746905
+      internalID: 109660842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: locust_pop_17
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fedd2716ed5fcd4c86a6af23cdf5341
+      internalID: -1247419671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 8b4d91399f1fc424e8bd617c4fde6e65
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      locust_pop_0: 480110172
+      locust_pop_1: 1442802958
+      locust_pop_10: 1034543336
+      locust_pop_11: 719639556
+      locust_pop_12: -1282852863
+      locust_pop_13: -1074177900
+      locust_pop_14: 1213287877
+      locust_pop_15: 110307368
+      locust_pop_16: 109660842
+      locust_pop_17: -1247419671
+      locust_pop_2: 1272366393
+      locust_pop_3: 1521609380
+      locust_pop_4: -1439202984
+      locust_pop_5: -731534774
+      locust_pop_6: -1787466599
+      locust_pop_7: 1030191349
+      locust_pop_8: 1326277030
+      locust_pop_9: 405278216
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
