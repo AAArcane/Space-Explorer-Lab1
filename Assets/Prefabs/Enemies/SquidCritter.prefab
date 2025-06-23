@@ -104,7 +104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lives: 0
-  maxLives: 3
+  maxLives: 5
   damage: 1
   experienceToGive: 1
   scoreToGiveOnDestroy: 2

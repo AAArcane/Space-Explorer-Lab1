@@ -1036,18 +1036,18 @@ MonoBehaviour:
     spawnedObjectCount: 0
   - pool: {fileID: 1999529957}
     spawnTimer: 0
-    spawnInterval: 0.8
+    spawnInterval: 0.5
     objectsPerWave: 70
     spawnedObjectCount: 0
   - pool: {fileID: 134368870}
     spawnTimer: 0
     spawnInterval: 0.5
-    objectsPerWave: 20
+    objectsPerWave: 60
     spawnedObjectCount: 0
   - pool: {fileID: 1541702619}
     spawnTimer: 0
     spawnInterval: 0.8
-    objectsPerWave: 30
+    objectsPerWave: 50
     spawnedObjectCount: 0
   - pool: {fileID: 1999529957}
     spawnTimer: 0
@@ -1062,12 +1062,12 @@ MonoBehaviour:
   - pool: {fileID: 134368870}
     spawnTimer: 0
     spawnInterval: 0.25
-    objectsPerWave: 40
+    objectsPerWave: 70
     spawnedObjectCount: 0
   - pool: {fileID: 1999529957}
     spawnTimer: 0
     spawnInterval: 0.5
-    objectsPerWave: 30
+    objectsPerWave: 70
     spawnedObjectCount: 0
   - pool: {fileID: 134368870}
     spawnTimer: 0
@@ -1082,7 +1082,7 @@ MonoBehaviour:
   - pool: {fileID: 1999529957}
     spawnTimer: 0
     spawnInterval: 0.5
-    objectsPerWave: 30
+    objectsPerWave: 40
     spawnedObjectCount: 0
 --- !u!4 &196944668
 Transform:
@@ -13386,12 +13386,12 @@ MonoBehaviour:
   maxEnergy: 50
   energyRegen: 0.05
   health: 0
-  maxHealth: 3
+  maxHealth: 4
   engineEffect: {fileID: 1256444319}
   experience: 0
   currentLevel: 0
   maxLevel: 30
-  playerLevels: 1e0000003c0000005a000000
+  playerLevels: 3c00000078000000b4000000
 --- !u!95 &1806995887
 Animator:
   serializedVersion: 7

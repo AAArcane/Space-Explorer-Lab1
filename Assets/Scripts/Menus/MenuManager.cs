@@ -14,6 +14,8 @@ public class MenuManager : MonoBehaviour
     public GameObject highScorePanel; // New panel for scores
     public TextMeshProUGUI[] levelScoreTexts; // Array for Level1,2,3 scores
 
+    [Header("UI References")]
+    public GameObject TutorialUI;
     void Start()
     {
         Time.timeScale = 1f;
@@ -22,6 +24,8 @@ public class MenuManager : MonoBehaviour
         // Initialize high score panel as hidden
         if (highScorePanel != null)
             highScorePanel.SetActive(false);
+        if (TutorialUI != null)
+            TutorialUI.gameObject.SetActive(false);
     }
 
 
@@ -62,6 +66,18 @@ public class MenuManager : MonoBehaviour
         }
 
         highScorePanel.SetActive(true);
+    }
+
+    public void ShowTutorial()
+    {
+        if (TutorialUI == null) return;
+        TutorialUI.gameObject.SetActive(true);
+    }
+
+    public void HideTutorial()
+    {
+        if (TutorialUI != null)
+            TutorialUI.gameObject.SetActive(false);
     }
 
     // New method: Close high score panel

@@ -1119,10 +1119,30 @@ MonoBehaviour:
     spawnInterval: 0.1
     objectsPerWave: 200
     spawnedObjectCount: 0
+  - pool: {fileID: 1541702619}
+    spawnTimer: 0
+    spawnInterval: 0.25
+    objectsPerWave: 60
+    spawnedObjectCount: 0
+  - pool: {fileID: 2006729512}
+    spawnTimer: 0
+    spawnInterval: 0.1
+    objectsPerWave: 4
+    spawnedObjectCount: 0
   - pool: {fileID: 282154033}
     spawnTimer: 0
     spawnInterval: 1
     objectsPerWave: 1
+    spawnedObjectCount: 0
+  - pool: {fileID: 134368870}
+    spawnTimer: 0
+    spawnInterval: 0.1
+    objectsPerWave: 200
+    spawnedObjectCount: 0
+  - pool: {fileID: 134368870}
+    spawnTimer: 0
+    spawnInterval: 0.1
+    objectsPerWave: 200
     spawnedObjectCount: 0
   - pool: {fileID: 1302484353}
     spawnTimer: 0
@@ -5128,7 +5148,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 7ef960a9271d89943a3ab42a2dcce1c4, type: 3}
-  m_Color: {r: 0.023159504, g: 0, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.46730947, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
@@ -12478,22 +12498,32 @@ MonoBehaviour:
     amount: 2
     range: 1
   - speed: 11
-    damage: 1
+    damage: 2
     size: 1.8
     amount: 3
     range: 1
   - speed: 14
-    damage: 2
+    damage: 3
     size: 2.2
     amount: 4
     range: 1.5
-  - speed: 14
-    damage: 3
-    size: 2.2
-    amount: 5
+  - speed: 15
+    damage: 2
+    size: 2.5
+    amount: 7
     range: 1.8
+  - speed: 17
+    damage: 4
+    size: 2.5
+    amount: 4
+    range: 2
   - speed: 14
-    damage: 1
+    damage: 5
+    size: 2.5
+    amount: 5
+    range: 2
+  - speed: 17
+    damage: 5
     size: 2.5
     amount: 7
     range: 2
@@ -12731,7 +12761,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1a1cc08d524095e4094ffb9d3ffde94d, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.38335374, g: 0.23406903, b: 0.4716981, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2

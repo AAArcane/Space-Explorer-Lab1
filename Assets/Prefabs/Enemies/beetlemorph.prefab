@@ -154,8 +154,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lives: 10
   maxLives: 10
-  damage: 1
-  experienceToGive: 1
+  damage: 4
+  experienceToGive: 2
   scoreToGiveOnDestroy: 10
   sprites:
   - {fileID: 1176829509, guid: 7c420a36450ab554984ea3f59b81b938, type: 3}

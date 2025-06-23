@@ -50,7 +50,7 @@ public class Boss2 : Enemy
             speedX = 0.2f;
             speedY = Random.Range(-1.2f, 1.2f);
             charging = false;
-            animator.SetBool("charging", false);
+            animator.SetBool("Charging", false);
         }
     }
     private void EnterChargeState()
@@ -60,7 +60,7 @@ public class Boss2 : Enemy
             speedX = Random.Range(3.5f, 4f);
             speedY = 0f;
             charging = true;
-            animator.SetBool("charging", true);
+            animator.SetBool("Charging", true);
         }
     }
 }
