@@ -50,8 +50,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lives: 0
-  maxLives: 750
-  damage: 20
+  maxLives: 1250
+  damage: 60
   experienceToGive: 40
   scoreToGiveOnDestroy: 200
 --- !u!212 &2198923998956553960

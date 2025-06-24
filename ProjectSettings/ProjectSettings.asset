@@ -688,11 +688,11 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: 944e4eeb-72c7-400c-baf1-13a8d4298c90
+  cloudProjectId: 3040654b-9989-47dd-b8b9-2f18d30a763e
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: SpaceQuest
-  organizationId: codelaboratory
+  projectName: Lab 1
+  organizationId: tranthanhiep0152
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}

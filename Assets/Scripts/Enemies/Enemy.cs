@@ -56,8 +56,8 @@ public class Enemy : MonoBehaviour
             AudioManager.Instance.PlayModifiedSound(destroySound);
             flashWhite.Reset();
             GameObject destroyEffect = destroyEffectPool.GetPooledObject();
-            destroyEffectPool.transform.position = transform.position;  
-            destroyEffectPool.transform.rotation = transform.rotation;
+            destroyEffect.transform.position = transform.position;
+            destroyEffect.transform.rotation = transform.rotation;
             destroyEffect.SetActive(true);
             UIController.Instance.AddScore(scoreToGiveOnDestroy);
             PlayerController.Instance.GainExperience(experienceToGive);

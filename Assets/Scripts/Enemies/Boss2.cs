@@ -37,7 +37,7 @@ public class Boss2 : Enemy
         {
             EnterIdleState();
         }
-        else if (transform.position.x < -4 || transform.position.x < playerPosition)
+        else if (transform.position.x < -8 || transform.position.x < playerPosition)
         {
             EnterChargeState();
         }
@@ -48,7 +48,7 @@ public class Boss2 : Enemy
         if (charging)
         {
             speedX = 0.2f;
-            speedY = Random.Range(-1.2f, 1.2f);
+            speedY = Random.Range(-1.2f, 3f);
             charging = false;
             animator.SetBool("Charging", false);
         }

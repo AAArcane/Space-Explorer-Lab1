@@ -13,7 +13,7 @@ public class Critter1 : MonoBehaviour
     private float moveInterval;
      private ObjectPooler zappedEffectPool;
      private ObjectPooler burnEffectPool;
-
+    private int score = 1;
     private int experienceToGive = 1;
     void Start()
     {
@@ -62,6 +62,7 @@ public class Critter1 : MonoBehaviour
             zapEffect.transform.rotation = transform.rotation;
             zapEffect.SetActive(true);
             PlayerController.Instance.GainExperience(experienceToGive);
+            UIController.Instance.AddScore(score);
             gameObject.SetActive(false);
             AudioManager.Instance.PlayModifiedSound(AudioManager.Instance.squished);
             GameManager.Instance.critterCounter++;
@@ -71,6 +72,7 @@ public class Critter1 : MonoBehaviour
             burnEffect.transform.rotation = transform.rotation;
             burnEffect.SetActive(true);
             PlayerController.Instance.GainExperience(experienceToGive);
+            UIController.Instance.AddScore(score);
             gameObject.SetActive(false);
             AudioManager.Instance.PlayModifiedSound(AudioManager.Instance.burn);
             GameManager.Instance.critterCounter++;
