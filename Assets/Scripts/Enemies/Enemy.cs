@@ -48,10 +48,11 @@ public class Enemy : MonoBehaviour
         lives -= damage;
 
         AudioManager.Instance.PlayModifiedSound(hitSound);
-       if (lives > 0)
+        if (lives > 0)
         {
             flashWhite.Flash();
-        } else
+        }
+        else
         {
             AudioManager.Instance.PlayModifiedSound(destroySound);
             flashWhite.Reset();
@@ -62,6 +63,8 @@ public class Enemy : MonoBehaviour
             UIController.Instance.AddScore(scoreToGiveOnDestroy);
             PlayerController.Instance.GainExperience(experienceToGive);
             gameObject.SetActive(false);
+
+            
         }
     }
 }

@@ -1,7 +1,7 @@
-using NUnit.Framework;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -29,6 +29,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private int maxLevel;
     [SerializeField] private List<int> playerLevels;
 
+    // Cheat system variables
+    private bool isInvincible = false;
+    private SpriteRenderer spriteRenderer;
+    private Color normalColor;
+    private Color cheatColor = new Color(0.6f, 1f, 1f, 1f); // Light cyan
+
     void Awake()
     {
         if (Instance != null)
@@ -46,10 +52,19 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         flashWhite = GetComponent<FlashWhite>();
+
+        // Initialize cheat system
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        normalColor = spriteRenderer.color;
+
+        // Load God Mode state from PlayerPrefs
+        bool savedGodMode = PlayerPrefs.GetInt("GodMode", 0) == 1;
+        SetGodMode(savedGodMode);
+
         destroyEffectPool = GameObject.Find("Boom1Pool").GetComponent<ObjectPooler>();
         for (int i = playerLevels.Count; i < maxLevel; i++)
         {
-            playerLevels.Add(Mathf.CeilToInt(playerLevels[playerLevels.Count - 1] * 1.1f + 15 ));
+            playerLevels.Add(Mathf.CeilToInt(playerLevels[playerLevels.Count - 1] * 1.1f + 15));
         }
         energy = maxEnergy;
         UIController.Instance.UpdateEnergySlider(energy, maxEnergy);
@@ -83,6 +98,12 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.RightShift) || Input.GetButtonDown("Fire1"))
             {
                 PhaserWeapon.Instance.Shoot();
+            }
+
+            // Toggle cheat with 'G' key
+            if (Input.GetKeyDown(KeyCode.G))
+            {
+                ToggleGodMode();
             }
         }
     }
@@ -134,7 +155,8 @@ public class PlayerController : MonoBehaviour
         {
             Asteroid asteroid = collision.gameObject.GetComponent<Asteroid>();
             if (asteroid) asteroid.TakeDamage(1, false, false);
-        } else if (collision.gameObject.CompareTag("Enemy"))
+        }
+        else if (collision.gameObject.CompareTag("Enemy"))
         {
             Enemy enemy = collision.gameObject.GetComponent<Enemy>();
             if (enemy) enemy.TakeDamage(1);
@@ -143,6 +165,8 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        if (isInvincible) return;
+
         health -= damage;
         UIController.Instance.UpdateHealthSlider(health, maxHealth);
         AudioManager.Instance.PlaySound(AudioManager.Instance.hit);
@@ -160,6 +184,7 @@ public class PlayerController : MonoBehaviour
             AudioManager.Instance.PlaySound(AudioManager.Instance.ice);
         }
     }
+
     public void GainExperience(int exp)
     {
         experience += exp;
@@ -172,16 +197,51 @@ public class PlayerController : MonoBehaviour
 
     public void LevelUp()
     {
-        experience -= playerLevels[currentLevel]; 
+        experience -= playerLevels[currentLevel];
         if (currentLevel < maxLevel - 1)
             currentLevel++;
-            UIController.Instance.UpdateExperienceSlider(experience, playerLevels[currentLevel]);
+        UIController.Instance.UpdateExperienceSlider(experience, playerLevels[currentLevel]);
         PhaserWeapon.Instance.Levelup();
         maxHealth++;
         health = maxHealth;
         UIController.Instance.UpdateHealthSlider(health, maxHealth);
     }
 
+    // Cheat system methods
+    public void ToggleGodMode()
+    {
+        SetGodMode(!isInvincible);
+        
+        // Update PlayerPrefs when toggling via key
+        PlayerPrefs.SetInt("GodMode", isInvincible ? 1 : 0);
+        PlayerPrefs.Save();
+        
+        // Update OptionsUI if it's open
+        if (OptionsUI.Instance != null && OptionsUI.Instance.gameObject.activeSelf)
+        {
+            OptionsUI.Instance.RefreshGodModeToggle();
+        }
+    }
 
+    public void SetGodMode(bool godModeActive)
+    {
+        isInvincible = godModeActive;
+        
+        // Ensure spriteRenderer is initialized
+        if (spriteRenderer == null)
+        {
+            spriteRenderer = GetComponent<SpriteRenderer>();
+            normalColor = spriteRenderer.color;
+        }
+        
+        spriteRenderer.color = isInvincible ? cheatColor : normalColor;
+
+        // Set energy to max when enabling God Mode
+        if (isInvincible && UIController.Instance != null)
+        {
+            energy = maxEnergy;
+            UIController.Instance.UpdateEnergySlider(energy, maxEnergy);
+        }
+
+    }
 }
-  

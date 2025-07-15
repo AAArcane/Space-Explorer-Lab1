@@ -16,6 +16,9 @@ public class MenuManager : MonoBehaviour
 
     [Header("UI References")]
     public GameObject TutorialUI;
+
+    public GameObject aboutUsUI;
+
     void Start()
     {
         Time.timeScale = 1f;
@@ -26,6 +29,8 @@ public class MenuManager : MonoBehaviour
             highScorePanel.SetActive(false);
         if (TutorialUI != null)
             TutorialUI.gameObject.SetActive(false);
+        if (aboutUsUI != null)
+            aboutUsUI.SetActive(false);
     }
 
 
@@ -79,6 +84,17 @@ public class MenuManager : MonoBehaviour
         if (TutorialUI != null)
             TutorialUI.gameObject.SetActive(false);
     }
+
+    public void ShowAboutUs()
+    {
+        if (aboutUsUI == null) return;
+        aboutUsUI.SetActive(true);
+    }
+    public void HideAboutUs()
+    {
+        if (aboutUsUI != null)
+            aboutUsUI.SetActive(false);
+    }   
 
     // New method: Close high score panel
     public void CloseHighScores()
